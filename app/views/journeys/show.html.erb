@@ -15,5 +15,11 @@
   <%= @journey.description %>
 </p>
 
+<ol>
+<% for clue in @journey.clues %>
+      <li><%= clue.content %></li>
+<% end %>
+</ol>
+
 <%= link_to 'Edit', edit_journey_path(@journey) %> |
 <%= link_to 'Back', journeys_path %>

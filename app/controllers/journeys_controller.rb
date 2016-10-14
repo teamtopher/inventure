@@ -15,6 +15,7 @@ class JourneysController < ApplicationController
   # GET /journeys/new
   def new
     @journey = Journey.new
+    @journey.clues.build
   end
 
   # GET /journeys/1/edit
@@ -69,6 +70,6 @@ class JourneysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journey_params
-      params.require(:journey).permit(:name, :difficulty, :description)
+      params.require(:journey).permit(:name, :difficulty, :description, clues_attributes: [:content, :id, :_destroy])
     end
 end
