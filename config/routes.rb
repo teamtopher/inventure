@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'pages/journeys'
+
+  get 'pages/dashboard'
+
+  get 'pages/journeys'
+
+  get 'pages/dashboard'
+
   devise_for :users
   resources :journeys
   # The priority is based upon order of creation: first created -> highest priority.
