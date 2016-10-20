@@ -19,6 +19,8 @@
 <ol>
 <% for clue in @journey.clues %>
       <li><%= clue.content %></li>
+      <%= image_tag clue.image_url(:thumb) if clue.image? %>
+
 <% end %>
 </ol>
 
