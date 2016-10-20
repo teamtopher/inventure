@@ -10,13 +10,15 @@
       </ul>
     </div>
   <% end %>
-<ol>
-<% for clue in @journey.clues %>
-      <li><%= clue.content %></li>
-      <%= image_tag clue.image_url(:thumb) if clue.image? %>
+<strong>Clues:</strong>
+<button type="button">Show Clue</button>
+  <ol>
+  <% for clue in @journey.clues %>
+        <li><%= clue.content %></li>
+        <%= image_tag clue.image_url(:thumb) if clue.image? %>
 
-<% end %>
-</ol>
+  <% end %>
+  </ol>
   <div class="field">
     <%= f.label :answer %><br>
     <%= f.text_field :answer %>
@@ -26,3 +28,9 @@
     <%= f.submit %>
   </div>
 <% end %>
+<script>
+$('ol > li').hide();
+$('button').click(function() {
+    $('ol > li:hidden:first').show();
+});
+</script>
