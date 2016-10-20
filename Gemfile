@@ -15,6 +15,9 @@ gem 'autoprefixer-rails'
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem "rmagick"
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem "figaro"
+gem "fog"
+
 
 group :development, :test do
   gem 'byebug'

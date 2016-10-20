@@ -1,8 +1,16 @@
 class JourneysController < ApplicationController
   before_action :set_journey, only: [:show, :edit, :update, :destroy]
+  before_filter :check_user, only: [:edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:creator, :new, :create, :edit, :update, :destroy]
+
+
 
   # GET /journeys
   # GET /journeys.json
+  def creator
+    @journeys = Journey.where(user: current_user).order("created_at DESC")
+  end
+
   def index
     @journeys = Journey.all
   end
@@ -26,6 +34,7 @@ class JourneysController < ApplicationController
   # POST /journeys.json
   def create
     @journey = Journey.new(journey_params)
+    @journey.user_id = current_user.id
 
     respond_to do |format|
       if @journey.save
@@ -70,6 +79,11 @@ class JourneysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journey_params
-      params.require(:journey).permit(:image, :remote_image_url, :name, :difficulty, :description, clues_attributes: [:remote_image_url, :image, :content, :id, :_destroy])
+      params.require(:journey).permit(:answer, :image, :remote_image_url, :name, :difficulty, :description, clues_attributes: [:remote_image_url, :image, :content, :id, :_destroy])
+    end
+    def check_user
+      if current_user != @journey.user
+        redirect_to root_url, alert: "Sorry, this journey belongs to someone else."
+      end
     end
 end

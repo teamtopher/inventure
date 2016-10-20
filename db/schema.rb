@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161020190715) do
+ActiveRecord::Schema.define(version: 20161020205031) do
+
+  create_table "claims", force: :cascade do |t|
+    t.string   "answer"
+    t.integer  "user_id"
+    t.integer  "journey_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "creator_id"
+    t.integer  "explorer_id"
+  end
 
   create_table "clues", force: :cascade do |t|
     t.text     "content"
@@ -28,6 +38,8 @@ ActiveRecord::Schema.define(version: 20161020190715) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image"
+    t.integer  "user_id"
+    t.integer  "claim_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,6 +55,7 @@ ActiveRecord::Schema.define(version: 20161020190715) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "journey_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

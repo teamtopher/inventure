@@ -16,13 +16,10 @@
   <%= @journey.description %>
 </p>
 
-<ol>
-<% for clue in @journey.clues %>
-      <li><%= clue.content %></li>
-      <%= image_tag clue.image_url(:thumb) if clue.image? %>
 
-<% end %>
-</ol>
+<div class="center">
+      <%= link_to "Let's Go!", new_journey_claim_path(@journey), class: "btn btn-primary" %>
+    </div>
 
 <%= link_to 'Edit', edit_journey_path(@journey) %> |
 <%= link_to 'Back', journeys_path %>

@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  resources :claims
   devise_for :users
-  resources :journeys
-  root 'journeys#index'
+resources :journeys do
+  resources :claims, only: [:new, :create]
+end  
+
+root 'journeys#index'
+
+  get 'creator' => "journeys#creator"
+  get 'creator_history' => "claims#creator_history"
+  get 'explorer_history' => "claims#explorer_history"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
