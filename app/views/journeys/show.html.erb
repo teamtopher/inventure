@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= image_tag @journey.image_url(:thumb) if @journey.image? %>
 
 <p>
   <strong>Name:</strong>
