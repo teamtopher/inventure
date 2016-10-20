@@ -10,12 +10,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
+      <li><%= link_to "Creator History", creator_history_path %>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-          <li><%= link_to "Edit Profile", edit_user_registration_path %>
+          <li><%= link_to "Explorer History", explorer_history_path %></li>
+          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
        		<li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
        <% else %>
         	<li><%= link_to "Sign up", new_user_registration_path %></li>

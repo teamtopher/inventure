@@ -6,11 +6,12 @@
     <% @journeys.each do |journey| %>
       <%= link_to journey do %>
         <%= image_tag journey.image_url(:thumb) if journey.image? %>
-      <% end %>
-       <div class="overlay">
+        <div class="overlay">
           <h2><%= journey.name %></h2>
           <h2>Difficulty: <%= journey.difficulty %></h2>
         </div>
+      <% end %>
+       
     <% end %>
   </div>
 </div>

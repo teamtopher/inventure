@@ -13,7 +13,7 @@
   <% @claims.each do |claim| %>
     <tr>
       <td class="center"><%= claim.journey.name %></td>
-      <td class="center"><%= claim.explorer.username %></td>
+      <td class="center"><%= claim.explorer.email %></td>
       <td class="center"><%= claim.answer %></td>
       <td class="center"><%= claim.created_at.strftime("%B %-d, %Y") %></td>
     </tr>

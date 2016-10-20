@@ -1,4 +1,4 @@
-<%= form_for(@claim) do |f| %>
+<%= form_for([@journey, @claim]) do |f| %>
   <% if @claim.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@claim.errors.count, "error") %> prohibited this claim from being saved:</h2>
@@ -14,8 +14,8 @@
 <button type="button">Show Clue</button>
   <ol>
   <% for clue in @journey.clues %>
-        <li><%= clue.content %></li>
-        <%= image_tag clue.image_url(:thumb) if clue.image? %>
+        <li><%= clue.content %>
+        <%= image_tag clue.image_url(:thumb) if clue.image? %></li>
 
   <% end %>
   </ol>

@@ -36,12 +36,14 @@ class ClaimsController < ApplicationController
   # POST /claims.json
   def create
     @claim = Claim.new(claim_params)
+ 
     @journey = Journey.find(params[:journey_id])
-
     @creator = @journey.user
+
     @claim.journey_id = @journey.id
     @claim.explorer_id = current_user.id
     @claim.creator_id = @creator.id
+
 
     respond_to do |format|
       if @claim.save
@@ -59,7 +61,7 @@ class ClaimsController < ApplicationController
   def update
     respond_to do |format|
       if @claim.update(claim_params)
-        format.html { redirect_to @claim, notice: 'Claim was successfully updated.' }
+        format.html { redirect_to explorer_history_url, notice: 'Claim was successfully updated.' }
         format.json { render :show, status: :ok, location: @claim }
       else
         format.html { render :edit }
@@ -73,7 +75,7 @@ class ClaimsController < ApplicationController
   def destroy
     @claim.destroy
     respond_to do |format|
-      format.html { redirect_to claims_url, notice: 'Claim was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Claim was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
