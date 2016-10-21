@@ -1,21 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Find Your Journey!</h1>
+<div class="row">
     <% @journeys.each do |journey| %>
       <div class="col-md-4">
-      <div class="opaque">
         <%= link_to journey do %>
         <%= image_tag journey.image_url, class: "image" %>
-      </div>
         <div class="overlay">
           <h3><%= journey.name %></h3>
           <h4>Difficulty: <%= journey.difficulty %></h4>
         </div>
       <% end %>
-        </div>
+      </div>
 
     <% end %>
 
 <br>
-
+</div>
 <%= link_to 'New Journey', new_journey_path %>
