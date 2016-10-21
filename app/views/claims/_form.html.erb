@@ -10,6 +10,9 @@
       </ul>
     </div>
   <% end %>
+
+<%= f.hidden_field :points, :value => @journey.difficulty * 50 %>
+
 <strong>Clues:</strong>
 <button type="button">Show Clue</button>
   <ol>
