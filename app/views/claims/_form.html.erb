@@ -14,7 +14,7 @@
 <%= f.hidden_field :points, :value => @journey.difficulty * 50 %>
 
 <strong>Clues:</strong>
-<button type="button">Show Clue</button>
+<button type="button" class="btn btn-primary">Show First Clue</button>
   <ol>
   <% for clue in @journey.clues %>
         <li><%= clue.content %>
@@ -22,9 +22,9 @@
 
   <% end %>
   </ol>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :answer %><br>
-    <%= f.text_field :answer %>
+    <%= f.text_field :answer, class: "form-control" %>
   </div>
   
   <div class="actions">

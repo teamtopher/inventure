@@ -10,34 +10,39 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
+
+  <div class="form-group">
+  <h2>Upload Main Journey Image</h2>
 
     <%= f.file_field :image %><br>
-    <%= f.label :remote_image_url, "or image URL" %><br />
-    <%= f.text_field :remote_image_url %>
-
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
+    <%= f.label :remote_image_url, "or paste image URL here" %><br />
+    <%= f.text_field :remote_image_url, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
+  <h2>Enter Journey Name and Description</h2>
+    <%= f.label :name %>
+    <%= f.text_area :name, class: "form-control" %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+  <h2>Enter Clues</h2>
       <%= f.fields_for :clues do |builder| %>
         <%= render 'clue_fields', f:builder %>
       <% end %>
-    <%= link_to_add_fields "Add Clue", f, :clues, class: "btn btn-mini btn-info" %>
+    <%= link_to_add_fields  "Add Clue", f, :clues , class: "btn btn-primary" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
+  <h2>Rate Journey Difficulty from 1-5</h2>
     <%= f.label :difficulty %><br>
-    <%= f.number_field :difficulty %>
+    <%= f.number_field :difficulty, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create Journey', class: "btn btn-primary" %>
   </div>
 <% end %>

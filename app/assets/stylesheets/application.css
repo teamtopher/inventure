@@ -13,6 +13,21 @@
  *= require_tree .
  *= require_self
  */
+.navbackground {
+	background-color: #578c7a !important;
+	border: none;
+}
+
+nav a {
+	color: #c3dfcf !important;
+}
+
+nav a:hover {
+	text-decoration: underline !important;
+}
+.containerbackground {
+	background-color: #1a342f;
+}
 
 .image {
 	width: 100%;
@@ -22,7 +37,7 @@
 
 .overlay {
 	text-align: center;
-	background-color:rgba(41, 128, 185,.6);
+	background-color: #578c7a;
 	height: 80px;
 	padding:10px;
 	margin-bottom: 30px;
@@ -32,4 +47,23 @@
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 22px;
+	color: #c3dfcf;
+}
+
+.hero-image {
+	height: 740px;
+	width: 100%;
+ }
+
+a {
+	color:#c3dfcf !important;
+}
+
+h1.all {
+	color: #c3dfcf;
+
+}
+
+.overlay h4 {
+	color: #1a342f !important;
 }
