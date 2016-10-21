@@ -1,6 +1,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
- include CarrierWave
+  include CarrierWave::RMagick
 
   #storage :file
   storage :fog
