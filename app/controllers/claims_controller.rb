@@ -11,6 +11,7 @@ class ClaimsController < ApplicationController
 
   def explorer_history
     @claims = Claim.all.where(explorer: current_user).order("created_at DESC")
+    @journeys = Journey.all
   end
 
   def index
@@ -88,6 +89,6 @@ class ClaimsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def claim_params
-      params.require(:claim).permit(:answer, :user_id, :journey_id)
+      params.require(:claim).permit(:answer, :user_id, :journey_id, :points)
     end
 end
