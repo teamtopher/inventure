@@ -13,6 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+.btn-primary {
+	background: #933e40;
+	border: none;
+}
+ h2, label, em, strong, p {
+ 	color: white;
+ }
+ .field {
+ 	text-align: left !important;
+ }
+ .form {
+ 	padding: 30px;
+ }
+ .form-group {
+ 	padding-bottom: 70px;
+ 	padding-top: 35px;
+ 	border-bottom: 1px solid white;
+ }
+ .form-group h2 {
+ 	font-size: 22px;
+ }
+ .image-show img {
+ 	width: 100%;
+ }
 .navbackground {
 	background-color: #578c7a !important;
 	border: none;
@@ -27,18 +52,22 @@ nav a:hover {
 }
 .containerbackground {
 	background-color: #1a342f;
+	height: 100%;
 }
+body {
+		background-color: #1a342f;
 
+}
 .image {
 	width: 100%;
-	height: 350px;
+	
 	object-fit: cover;
 }
 
 .overlay {
 	text-align: center;
 	background-color: #578c7a;
-	height: 80px;
+	height: 100px;
 	padding:10px;
 	margin-bottom: 30px;
 }
@@ -51,6 +80,7 @@ nav a:hover {
 }
 
 .hero-image {
+	background: white !important;
  }
  .hero-image img {
  	width: 100%;
@@ -71,4 +101,25 @@ h1.all {
 .container-fluid {
 	padding-left: 0px !important;
 	padding-right: 0px !important;
+}
+.hero-image h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 28px;
+	border: 2px solid black;
+	width: 20%;
+	margin-left: 45%;
+	position: absolute;
+	margin-top: -25%;
+	padding: 10px;
+}
+.hero-image a {
+	color: black !important;
+}
+@media screen and (max-width:1000px) {
+
+	.col-md-4 {
+	width: 50% !important;
+	float: left;
+	}
 }

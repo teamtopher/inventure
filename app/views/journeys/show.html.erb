@@ -1,20 +1,19 @@
+<div class="form">
 <p id="notice"><%= notice %></p>
-<%= image_tag @journey.image_url(:thumb) if @journey.image? %>
+<div class="image-show">
+	<%= image_tag @journey.image_url if @journey.image? %>
+</div>
+
+  <h2><%= @journey.name %></h2>
 
 <p>
-  <strong>Name:</strong>
-  <%= @journey.name %>
-</p>
-
-<p>
-  <strong>Difficulty:</strong>
-  <%= @journey.difficulty %>
-</p>
-
-<p>
-  <strong>Description:</strong>
   <%= @journey.description %>
 </p>
+<p>
+  Difficulty Rating:<%= @journey.difficulty %>
+</p>
+
+
 
 
 <div class="center">
@@ -23,3 +22,4 @@
 
 <%= link_to 'Edit', edit_journey_path(@journey) %> |
 <%= link_to 'Back', journeys_path %>
+</div>

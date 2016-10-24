@@ -1,3 +1,4 @@
+<div class="form">
 <%= form_for(@journey) do |f| %>
   <% if @journey.errors.any? %>
     <div id="error_explanation">
@@ -12,7 +13,7 @@
   <% end %>
 
   <div class="form-group">
-  <h2>Upload Main Journey Image</h2>
+  <h2>STEP 1: Add an Image to Your Journey</h2>
 
     <%= f.file_field :image %><br>
     <%= f.label :remote_image_url, "or paste image URL here" %><br />
@@ -20,25 +21,24 @@
   </div>
 
   <div class="form-group">
-  <h2>Enter Journey Name and Description</h2>
-    <%= f.label :name %>
+  <h2>STEP 2: Describe Your Journey</h2>
+    <%= f.label :name, "Add a catchy name to make your journey stand out." %>
     <%= f.text_area :name, class: "form-control" %>
     <br>
-    <%= f.label :description %>
+    <%= f.label :description, "Add 2 to 3 tags to describe your journey (e.g., hungry, hipster, nighttime)" %>
     <%= f.text_area :description, class: "form-control" %>
   </div>
 
   <div class="form-group">
-  <h2>Enter Clues</h2>
+  <h2>STEP 3: Add Clues</h2>
       <%= f.fields_for :clues do |builder| %>
         <%= render 'clue_fields', f:builder %>
       <% end %>
-    <%= link_to_add_fields  "Add Clue", f, :clues , class: "btn btn-primary" %>
+    <%= link_to_add_fields "Add Another Clue", f, :clues, class: "btn btn-primary"  %>
   </div>
 
   <div class="form-group">
-  <h2>Rate Journey Difficulty from 1-5</h2>
-    <%= f.label :difficulty %><br>
+  <h2>STEP 4: Rate Journey Difficulty from 1-5</h2>
     <%= f.number_field :difficulty, class: "form-control" %>
   </div>
 
@@ -46,3 +46,4 @@
     <%= f.submit 'Create Journey', class: "btn btn-primary" %>
   </div>
 <% end %>
+</div>
