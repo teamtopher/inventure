@@ -9,7 +9,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/header' %>
+<%= render 'layouts/header' unless @skip_header %>
 <%= yield %>
 </div>
 </div>

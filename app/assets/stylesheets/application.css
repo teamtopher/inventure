@@ -51,8 +51,9 @@ nav a:hover {
 }
 
 .hero-image {
-	height: 740px;
-	width: 100%;
+ }
+ .hero-image img {
+ 	width: 100%;
  }
 
 a {
@@ -66,4 +67,8 @@ h1.all {
 
 .overlay h4 {
 	color: #1a342f !important;
+}
+.container-fluid {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 }
