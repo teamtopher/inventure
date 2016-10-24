@@ -9,6 +9,9 @@
         <div class="overlay">
           <h3><%= journey.name %></h3>
           <h4>Difficulty: <%= journey.difficulty %></h4>
+          <% if current_user == journey.user %>
+             <h5><%= link_to 'Destroy', journey, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
+          <% end %>
         </div>
       <% end %>
       </div>
