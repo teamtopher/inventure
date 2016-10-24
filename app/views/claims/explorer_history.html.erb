@@ -6,6 +6,7 @@
 </div>
 <table class="table table-striped table-bordered">
   <tr>
+    <th class="center">Journey Name</th>
     <th class="center">Your Answer</th>
     <th class="center">Points Earned</th>
     <th class="center">Completed?</th>
@@ -13,6 +14,7 @@
 
   <% @claims.each do |claim| %>
     <tr>
+      <td class="center"><%= claim.journey.name %></td>
       <td class="center"><%= claim.answer %></td>
       <td class="center"><%= claim.points %></td>
       <td class="center"><%= claim.created_at.strftime("%B %-d, %Y") %></td>
