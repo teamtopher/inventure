@@ -38,6 +38,8 @@ h1.mobileheader{
 .btn-primary {
 	background: #933e40;
 	border: none;
+	margin-left: 25%;
+	margin-bottom: 35px;
 }
 
 .btn-primary body {
