@@ -14,14 +14,17 @@
 <%= f.hidden_field :points, :value => @journey.difficulty * 50 %>
 
 <strong>Clues:</strong>
-<button type="button" class="btn btn-primary">Show First Clue</button>
-  <ol>
-  <% for clue in @journey.clues %>
-        <li><%= clue.content %>
-        <%= image_tag clue.image_url(:thumb) if clue.image? %></li>
+  <div class="row">
+    <ol>
+    <% for clue in @journey.clues %>
+          <li><%= clue.content %>
+          <%= image_tag clue.image_url, class: "clue-image" %></li>
+          <br>
+    <% end %>
+    </ol>
+  </div>
+  <button type="button" class="btn btn-primary">Show Next Clue</button>
 
-  <% end %>
-  </ol>
   <div class="form-group">
     <%= f.label :answer %><br>
     <%= f.text_field :answer, class: "form-control" %>

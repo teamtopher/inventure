@@ -71,6 +71,9 @@ h1.mobileheader{
 	border: none;
 }
 
+img.clue-image {
+	width:100%;
+}
 
 nav a {
 	color: #c3dfcf !important;
@@ -78,6 +81,18 @@ nav a {
 
 nav a:hover {
 	text-decoration: underline !important;
+}
+.navbar-header {
+	padding: 10px;
+}
+.navbar-header img {
+	width: 100px;
+	height: auto;
+	margin-left: 10px;
+}
+
+.icon-bar {
+	border: 1px white solid !important;
 }
 .containerbackground {
 	background-color: #1a342f;
@@ -89,14 +104,13 @@ body {
 }
 .image {
 	width: 100%;
-	
 	object-fit: cover;
 }
 
 .overlay {
 	text-align: center;
 	background-color: #578c7a;
-	height: 100px;
+	min-height: 100px;
 	padding:10px;
 	margin-bottom: 30px;
 }
@@ -104,8 +118,13 @@ body {
 	margin-top: 0px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	font-size: 22px;
+	font-size: 1.5rem;
 	color: #c3dfcf;
+}
+.overlay h4 {
+	color: #1a342f !important;
+	font-size: 1.2rem;
+
 }
 
 .hero-image {
@@ -149,9 +168,7 @@ label {
 
 }
 
-.overlay h4 {
-	color: #1a342f !important;
-}
+
 .container-fluid {
 	padding-left: 0px !important;
 	padding-right: 0px !important;
@@ -225,5 +242,8 @@ label {
 		font-size: .8rem;
 		width: 30%;
 	}
-
+	.btn-primary {
+		width: 100%;
+		margin: auto;
+	}
 }
