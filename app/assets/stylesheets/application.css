@@ -14,11 +14,37 @@
  *= require_self
  */
 
+p, body, a, em, h4 {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+h1, h2, h3 {
+	font-family: 'Fredoka One', cursive;
+	color: white;
+}
+
+h1.mobileheader{
+	text-align: center;
+}
+.center h2 {
+	color: #DCD5C7;
+}
+
+.btn-link{
+	color: white;
+}
+
 .btn-primary {
 	background: #933e40;
 	border: none;
 }
- h2, label, em, strong, p {
+
+.btn-primary body {
+	color:#c3dfcf !important
+}
+
+ h2, label, em, strong{
  	color: white;
  }
  .field {
@@ -42,6 +68,7 @@
 	background-color: #578c7a !important;
 	border: none;
 }
+
 
 nav a {
 	color: #c3dfcf !important;
@@ -86,12 +113,37 @@ body {
  	width: 100%;
  }
 
-a {
-	color:#c3dfcf !important;
+.jumbotron{
+	background-color: #578c7a !important;
+	text-align: center;
+	font-size: 7rem !important;
 }
 
+th {
+	color: black;
+}
+
+
 h1.all {
-	color: #c3dfcf;
+	color: #DCD5C7;
+
+
+}
+
+.form h2 {
+	color: #DCD5C7;
+	margin-bottom: 5%;
+	font-weight: normal;
+	font-family: 'Fredoka One', cursive;
+
+
+
+}
+
+label {
+	font-weight: normal;
+	color: #DCD5C7;
+	font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -102,6 +154,18 @@ h1.all {
 	padding-left: 0px !important;
 	padding-right: 0px !important;
 }
+.hero-image p {
+	margin-top: -28%;
+	text-align: center;
+	width: 20%;
+	position: absolute;
+	margin-left: 45%;
+	color: black;
+	font-size: 1.5rem;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
 .hero-image h1 {
 	text-align: center;
 	text-transform: uppercase;
@@ -110,10 +174,13 @@ h1.all {
 	width: 20%;
 	margin-left: 45%;
 	position: absolute;
-	margin-top: -25%;
+	margin-top: -20%;
 	padding: 10px;
 	border-radius: 5px;
+	font-family: 'Fredoka One', cursive;
+
 }
+
 .hero-image a {
 	color: black !important;
 }
@@ -125,8 +192,36 @@ h1.all {
 	}
 
 	.hero-image h1 {
-		font-size: 1rem !important;
-		width: 25%;
-		border: 1px solid black;
+		font-size: 1.2rem;
+		width: 20%;
+		border: 1px solid black;	
 	}
+
+	.hero-image p {
+		font-size: 1rem;
+		width: 50%;
+		margin-left: 30%;
+	}
+
+	.form h2 {
+		font-size: 2rem;
+	}
+
+	label {
+		font-size: 1rem;
+	}
+}
+	@media screen and (max-width:480px) {
+
+	.hero-image h1 {
+		font-size: .8rem;
+		margin-top: -15%;
+	}
+	.hero-image p{
+		line-height: .8rem;
+		margin-left: 40.5%;
+		font-size: .8rem;
+		width: 30%;
+	}
+
 }
