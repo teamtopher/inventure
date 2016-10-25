@@ -126,5 +126,7 @@ h1.all {
 
 	.hero-image h1 {
 		font-size: 1rem !important;
+		width: 25%;
+		border: 1px solid black;
 	}
 }
