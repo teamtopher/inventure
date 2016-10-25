@@ -105,13 +105,14 @@ h1.all {
 .hero-image h1 {
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 28px;
+	font-size: 2rem;
 	border: 2px solid black;
 	width: 20%;
 	margin-left: 45%;
 	position: absolute;
 	margin-top: -25%;
 	padding: 10px;
+	border-radius: 5px;
 }
 .hero-image a {
 	color: black !important;
@@ -121,5 +122,9 @@ h1.all {
 	.col-md-4 {
 	width: 50% !important;
 	float: left;
+	}
+
+	.hero-image h1 {
+		font-size: 1rem !important;
 	}
 }
