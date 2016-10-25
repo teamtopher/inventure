@@ -1,4 +1,12 @@
+<!-- <div class="row landing-nav">
+ <ul class="nav navbar-nav navbar-right">
+     
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><%= link_to "Sign in", new_user_session_path %></li>       
+      </ul>
+    </div>-->
 <div class="row">
+
 <div class="hero-image">
 	<%= image_tag "landing.png" %>
 	<p>a treasure hunt for places</p>
@@ -34,6 +42,8 @@
     <div class="actions">
       <%= f.submit "Sign up", class: "btn btn-primary" %>
     </div>
+      <%= render "devise/shared/links" %>
+
   <% end %>
 
 

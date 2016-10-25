@@ -90,6 +90,9 @@ nav a:hover {
 	height: auto;
 	margin-left: 10px;
 }
+.landing-nav {
+	background: #DCD5C7;
+}
 
 .icon-bar {
 	border: 1px white solid !important;
