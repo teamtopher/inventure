@@ -14,6 +14,8 @@
  *= require_self
  */
 
+/* --------- Text Styles --------- */
+
 p, body, a, em, h4 {
 	font-family: 'Montserrat', sans-serif;
 	color: white;
@@ -31,6 +33,23 @@ h1.mobileheader{
 	color: #DCD5C7;
 }
 
+h2 {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.points h3 { /* For displaying points in Explorer History & elsewhere. */
+	font-size: 1.8rem;
+	text-align: center;
+
+}
+
+/* --------- Button Styles --------- */
+
+.btn {
+	display: block;
+
+}
 .btn-link{
 	color: white;
 }
@@ -66,15 +85,17 @@ h1.mobileheader{
  .image-show img {
  	width: 100%;
  }
-.navbackground {
-	background-color: #578c7a !important;
-	border: none;
-}
 
 img.clue-image {
 	width:100%;
 }
 
+/* --------- Navigation Styles --------- */
+
+.navbackground {
+	background-color: #578c7a !important;
+	border: none;
+}
 nav a {
 	color: #c3dfcf !important;
 }
@@ -84,15 +105,38 @@ nav a:hover {
 }
 .navbar-header {
 	padding: 10px;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 }
 .navbar-header img {
 	width: 100px;
 	height: auto;
-	margin-left: 10px;
+
 }
 .landing-nav {
 	background: #DCD5C7;
+
 }
+.landing-nav ul{
+	list-style-type: none;	
+	text-align: right;
+	margin-right: 10px;
+}
+.landing-nav ul li {
+	display: inline;
+	margin-right: 15px;
+}
+
+.landing-nav a {
+		color: #1a342f;
+}
+
+
+
+.navbar-collapse li {
+	padding-left: 10px;
+}
+
 
 .icon-bar {
 	border: 1px white solid !important;
@@ -148,10 +192,9 @@ th {
 }
 
 
+
 h1.all {
 	color: #DCD5C7;
-
-
 }
 
 .form h2 {
@@ -159,22 +202,18 @@ h1.all {
 	margin-bottom: 5%;
 	font-weight: normal;
 	font-family: 'Fredoka One', cursive;
-
-
-
 }
 
 label {
 	font-weight: normal;
 	color: #DCD5C7;
 	font-family: 'Montserrat', sans-serif;
-
 }
-
 
 .container-fluid {
 	padding-left: 0px !important;
 	padding-right: 0px !important;
+
 }
 .hero-image p {
 	margin-top: -28%;
@@ -200,7 +239,6 @@ label {
 	padding: 10px;
 	border-radius: 5px;
 	font-family: 'Fredoka One', cursive;
-
 }
 
 .hero-image a {
@@ -247,6 +285,7 @@ label {
 	}
 	.btn-primary {
 		width: 100%;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

@@ -1,29 +1,27 @@
 <div class="center">
-  <h2>Explorer History</h2>
+  <h2>What Have You Found?</h2>
 </div>
-<div class="jumbotron">
-      <h1>Your Total Points: <%= @claims.sum(:points).to_i %></h1>
+<div class="points">
+  <h3>Your Total Points: <%= @claims.sum(:points).to_i %></h3>
 </div>
-<table class="table table-striped table-bordered">
-  <tr>
-    <th class="center">Journey Name</th>
-    <th class="center">Your Answer</th>
-    <th class="center">Points Earned</th>
-    <th class="center">Completed?</th>
-    <th class="center">Test</th>
-    <th class="center">Test</th>
-    <th class="center">Test</th>
-  </tr>
-
-  <% @claims.each do |claim| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-responsive">
     <tr>
-      <td class="center"><%= claim.journey.name %></td>
-      <td class="center"><%= claim.answer %></td>
-      <td class="center"><%= claim.points %></td>
-      <td class="center"><%= claim.created_at.strftime("%B %-d, %Y") %></td>
+      <th class="center">Journeys</th>
+      <th class="center">Your Answer</th>
+      <th class="center">Completed?</th>
+      <th class="center">Points Earned</th>
     </tr>
-  <% end %>
-</table>
 
+    <% @claims.each do |claim| %>
+      <tr>
+        <td class="center"><%= claim.journey.name %></td>
+        <td class="center"><%= claim.answer %></td>
+        <td class="center"><%= claim.created_at.strftime("%B %-d, %Y") %></td>
+        <td class="center"><%= claim.points %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 <br>
 

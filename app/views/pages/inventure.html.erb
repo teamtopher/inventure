@@ -1,10 +1,10 @@
-<!-- <div class="row landing-nav">
- <ul class="nav navbar-nav navbar-right">
+<div class="row landing-nav">
+ <ul class="">
+          <li><%= link_to "Log In", new_user_session_path %></li>            
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
      
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <li><%= link_to "Sign in", new_user_session_path %></li>       
       </ul>
-    </div>-->
+    </div>
 <div class="row">
 
 <div class="hero-image">
@@ -42,7 +42,6 @@
     <div class="actions">
       <%= f.submit "Sign up", class: "btn btn-primary" %>
     </div>
-      <%= render "devise/shared/links" %>
 
   <% end %>
 
