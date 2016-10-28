@@ -12,7 +12,7 @@ class JourneysController < ApplicationController
   end
 
   def index
-    @journeys = Journey.all
+    @journeys = Journey.order("created_at DESC")
   end
 
   # GET /journeys/1

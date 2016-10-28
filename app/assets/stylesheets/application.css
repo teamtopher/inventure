@@ -131,12 +131,14 @@ nav a:hover {
 		color: #1a342f;
 }
 
-
-
+.container-fluid .navbar-collapse {
+	margin-right: 0 !important;
+}
 .navbar-collapse li {
 	padding-left: 10px;
+	text-align: center;
+	font-size: 1.5rem;
 }
-
 
 .icon-bar {
 	border: 1px white solid !important;
@@ -187,7 +189,9 @@ body {
 	font-size: 7rem !important;
 }
 
-th {
+th.center {
+	font-weight: bolder;
+	background: white;
 	color: black;
 }
 
