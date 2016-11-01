@@ -48,10 +48,7 @@ h2 {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 }
-.col-md-4, .col-md-6, .col-md-8, .col-md-offset-4 {
-	padding-right: 0px !important;
-	padding-left: 0px !important;
-}
+
 
 /* --------- Button Styles --------- */
 
@@ -85,7 +82,7 @@ h2 {
 
  .landingformimg {
  	padding: 30px;
- 	background: url(signinbackground.jpg) no-repeat center center;
+ 	background: url('signinbackground.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
