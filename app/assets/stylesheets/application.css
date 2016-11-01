@@ -22,7 +22,7 @@ p, body, a, em, h4 {
 }
 
 h1, h2, h3 {
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Montserrat', sans-serif;
 	color: white;
 }
 
@@ -44,6 +44,15 @@ h2 {
 
 }
 
+.row {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+.col-md-4, .col-md-6, .col-md-8, .col-md-offset-4 {
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+
 /* --------- Button Styles --------- */
 
 .btn {
@@ -57,7 +66,6 @@ h2 {
 .btn-primary {
 	background: #933e40;
 	border: none;
-	margin-left: 25%;
 	margin-bottom: 35px;
 }
 
@@ -74,6 +82,18 @@ h2 {
  .form {
  	padding: 30px;
  }
+
+ .landingformimg {
+ 	padding: 30px;
+ 	background: url(signinbackground.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    min-height: 600px;
+}
+
  .form-group {
  	padding-bottom: 70px;
  	padding-top: 35px;
@@ -114,7 +134,7 @@ nav a:hover {
 
 }
 .landing-nav {
-	background: #DCD5C7;
+	background: #9FC0C7;
 
 }
 .landing-nav ul{
@@ -143,12 +163,77 @@ nav a:hover {
 .icon-bar {
 	border: 1px white solid !important;
 }
+
+.calltoaction {
+	width:100%;
+	height: 250px;
+	background-color: #913D42;
+	text-align: center;
+}
+
+.calltoaction p {
+	font-size: 3rem;
+	padding-top: 10%;
+	font-family: 'Montserrat', sans-serif;
+	color: #DCD5C7 !important;
+
+}
+
+
+.landingcolumns {
+	height: 900px;
+	background-color: #913D42;
+
+}
+
+
+.l-column-left{
+	background-color:#913D42;
+	height:350px;
+
+
+}
+
+.l-column-right{
+	background-color:#913D42;
+	height:350px;
+
+
+}
+
+
+.landingcolumns h1 {
+	text-align: center;
+	font-size: 3rem;
+	padding-top: 150px;
+	font-family: 'Montserrat', sans-serif;
+	color: #1A3530 !important;
+}
+
+.l-text-left {
+	height: 350px;
+	background-color: #913D42;
+}
+
+.l-text-right {
+	height: 350px;
+	background-color: #913D42;
+}
+
+
+.landingform {
+	border-radius: 15px;
+	padding: 15px !important;
+	background: white;
+	opacity: 0.9;
+}
+
 .containerbackground {
 	background-color: #1a342f;
 	height: 100%;
 }
 body {
-		background-color: #1a342f;
+	background-color: #1a342f;
 
 }
 .image {
@@ -181,6 +266,7 @@ body {
  }
  .hero-image img {
  	width: 100%;
+ 	object-fit: cover;
  }
 
 .jumbotron{
@@ -196,9 +282,16 @@ th.center {
 }
 
 
-
 h1.all {
 	color: #DCD5C7;
+}
+
+
+.landingformimg h2 {
+	color: #1a342f;
+	margin-bottom: 5%;
+	font-weight: normal;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .form h2 {
@@ -209,8 +302,9 @@ h1.all {
 }
 
 label {
+	font-size: 2rem;
 	font-weight: normal;
-	color: #DCD5C7;
+	color: #1a342f;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -220,13 +314,14 @@ label {
 
 }
 .hero-image p {
-	margin-top: -28%;
+	margin-top: -40%;
 	text-align: center;
 	width: 20%;
 	position: absolute;
 	margin-left: 45%;
 	color: black;
-	font-size: 1.5rem;
+	line-height: 3rem;
+	font-size: 3rem;
 	font-family: 'Montserrat', sans-serif;
 
 }
@@ -242,7 +337,7 @@ label {
 	margin-top: -20%;
 	padding: 10px;
 	border-radius: 5px;
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .hero-image a {
@@ -275,16 +370,59 @@ label {
 		font-size: 1rem;
 	}
 }
-	@media screen and (max-width:480px) {
+	@media screen and (max-width:568px) {
+
+	.calltoaction p {
+		font-size: 1rem;
+		padding-top: 15%;
+	}
+
+	label {
+		font-size: 1rem;
+	}
+
+	.calltoaction {
+		height: 125px;
+	}
+	
+	.col-md-4 {
+		width: 100% !important;
+		float: left;
+	}
+
+	.mobilelanding {
+		padding:0px;
+	}
+
+	.l-column-left {
+		height:100px;
+		margin: 0px;
+	}
+
+	.l-column-right{
+		height:100px;
+		margin: 0px;
+	}
+
+	.landingcolumns {
+		height: 200px;
+	}
+
+	.landingcolumns h1 {
+		font-size: 2rem;
+		padding-top: 32.5px;
+		margin: 0px;
+	}
+
 
 	.hero-image h1 {
 		font-size: .8rem;
-		margin-top: -15%;
+		margin-top: -25%;
 	}
 	.hero-image p{
-		line-height: .8rem;
+		line-height: 1.2rem;
 		margin-left: 40.5%;
-		font-size: .8rem;
+		font-size: 1.2rem;
 		width: 30%;
 	}
 	.btn-primary {
@@ -292,4 +430,9 @@ label {
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	.landingformimg {
+		min-height: 400px;
+	}
+
 }
