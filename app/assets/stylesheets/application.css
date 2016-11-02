@@ -82,7 +82,7 @@ h2 {
 
  .landingformimg {
  	padding: 30px;
- 	background: image-url('signinbackground.jpg') no-repeat center center;
+ 	background: url('signinbackground.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
