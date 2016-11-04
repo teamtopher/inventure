@@ -15,7 +15,9 @@
  */
 
 /* --------- Text Styles --------- */
-
+#step_1 {
+	display:block;
+}
 p, body, a, em, h4 {
 	font-family: 'Montserrat', sans-serif;
 	color: white;

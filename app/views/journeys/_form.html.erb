@@ -11,7 +11,11 @@
       </ul>
     </div>
   <% end %>
-
+<a href="#" rel="step_1">Step 1</a>
+<a href="#" rel="step_2">Step 2</a>
+<a href="#" rel="step_3">Step 3</a>
+<div id ="step-container">
+<div id = "step_1"  style="display:none">
   <div class="form-group">
   <h2>STEP 1: Add an image for the journey</h2>
 
@@ -19,6 +23,8 @@
     <%= f.label :remote_image_url, "or paste image URL here" %><br />
     <%= f.text_field :remote_image_url, class: "form-control" %>
   </div>
+</div>
+<div id = "step_2"  style="display:none">
 
   <div class="form-group">
   <h2>STEP 2: Describe the journey</h2>
@@ -28,6 +34,8 @@
     <%= f.label :description, "2. Add 2-3 tags to describe your journey (e.g., hungry, hipster, nighttime)" %>
     <%= f.text_area :description, class: "form-control" %>
   </div>
+</div>
+<div id = "step_3"  style="display:none">
 
   <div class="form-group">
   <h2>STEP 3: Add Clues</h2>
@@ -36,14 +44,24 @@
       <% end %>
     <%= link_to_add_fields "Add Another Clue", f, :clues, class: "btn btn-primary" %>
   </div>
+</div>
+<div id = "step_4" style="display:none">
 
   <div class="form-group">
   <h2>STEP 4: Rate the difficulty from 1-5</h2>
     <%= f.number_field :difficulty, class: "form-control" %>
+    
   </div>
-
-  <div class="actions">
-    <%= f.submit 'Create Journey', class: "btn btn-primary" %>
-  </div>
+</div>
+</div>
+<div class="actions">
+      <%= f.submit 'Create Journey', class: "btn btn-primary" %>
+    </div>
 <% end %>
 </div>
+<script>
+$('a').on('click', function(){
+   var target = $(this).attr('rel');
+   $("#"+target).show().siblings("#step-container").hide();
+});
+</script>
