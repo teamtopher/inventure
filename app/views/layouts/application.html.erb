@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
-<div class="container-fluid">
-<div class="containerbackground">
-<head>
-<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-  <title>Inventure</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-</head>
-<body>
-<%= render 'layouts/header' unless @skip_header %>
-<%= yield %>
-</div>
-</div>
-</body>
+	<head>
+		<title>Inventure</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Montserrat|Raleway|Rancho" rel="stylesheet">
+  		
+  		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  		<%= csrf_meta_tags %> 
+	</head>
+	<body>
+		<div class="container-fluid">
+		<div class="containerbackground">
+			<%= render 'layouts/header' unless @skip_header %>
+			<%= yield %>
+		</div>
+		</div>
+	</body>
 </html>
