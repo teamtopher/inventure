@@ -1,97 +1,114 @@
-<div class="row landing-nav">
- <ul class="">
-          <li><%= link_to "Log In", new_user_session_path %></li>            
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-     
-      </ul>
-    </div>
-<div class="row">
+<div class="landing-nav">
+ <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 
-<div class="hero-image">
-	<%= image_tag "landing.jpg" %>
-	<p>A treasure hunt for places</p>
-	<h1><%= link_to "Let's Go!", new_user_registration_path %></h1>
-</div>
-</div>
+    <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-<div class="calltoaction row">
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-<p>Make your journey as exciting as your destination.</p>
-
-</div>
-<div class="row">
-<div class="landingcolumns">
-
-  <div class="mobilelanding col-md-4">
-    <div class="l-column-left">
-
-    <h1>Create</h1>
-
-    </div>
-    </div>
-    <div class="col-md-8">
-    <div class="l-text-left">
-    
-    <h1>Text Stuff</h1>
-
-    </div>
-    </div>
-  </div>
-
-  <div class="row">
-<div class="col-md-8">
-    <div class="l-text-right">
-    
-    <h1>Text Stuff</h1>
-
-    </div>
-    </div>
-
-
-  <div class="mobilelanding col-md-4">
-    <div class="l-column-right">
-
-    
-    <h1>Explore</h1>
-
-    </div>
-    </div>
-  </div>
- </div>
+  <ul class="nav navbar-nav navbar-right">
+  <% if user_signed_in? %>
+      <li><%= link_to "Find a Journey", journeys_path %></li>
+      <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+      <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
+   <% else %>
+      <li><%= link_to "Log in", new_user_session_path %></li>
+      <li><%= link_to "Sign up", new_user_registration_path %></li>
+    <% end %>
+   
+  </ul>
+  </div><!--collapse navbar-collapse-->
+</div><!--landing-nav-->
 
 <div class="row">
-<div class="landingformimg">
-  <div class="col-md-4 col-md-offset-4 landingform">
-		  <h2 class="mobileheader">Journey With Us!</h2>
+  <div class="hero-image">
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+    <div class="col-md-3 branding">
+        <h1>A treasure hunt for places</h1>
+        <h2><%= link_to "LET'S GO!", new_user_registration_path %></h2>
+    </div><!--col-md-4-->
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, class: "form-control" %>
-    </div>
+  </div><!--hero-image-->
+</div><!--row-->
 
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-    </div>
+<div class="row identity">
+    <h1>Make the journey as exciting as the destination.</h1>
+</div><!--row identity-->
 
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-    </div>
+<div class="row identity">
+  <div class="col-md-3">
+    <h2>Invent Your Next Adventure</h2>
+    <p>Inventure is a community exploration app that lets you create and share treasure hunts for your favorite places and vendors. Are you ready to invent your next adventure?</p>
+  </div><!--col-md-3-->
+  <div class="col-md-3">
+    <h2>Explore Your Community</h2>
+    <p>Rather than tell you where to go or how to get there, Inventure offers a journey in your own community. Follow clues from stop to stop and earn points for discovering new places.</p>
+  </div><!--col-md-3-->
+</div><!--row identity-->
 
-    <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-primary" %>
-    </div>
+<div class="row explore">
+  <div class="col-md-3">
+      <div class="explore-img">
+      </div><!--explore-img-->
+  </div><!--col-md-4-->
 
-  <% end %>
-  
-    
-	</div>
-</div>
-</div>
+  <div class="col-md-5">
+      <div class="explore-text">
+        <h1>Explore</h1>
+        <p>Explore the journeys of other Inventurers, following clues from stop to stop toward a final destination. Earn points and share your adventures with your friends.</p>
+      </div>
+  </div><!--col-md-8-->
+</div><!--row-->
+
+<div class="row invent">
+  <div class="col-md-3 right">  
+    <div class="invent-img">
+    </div><!--invent-img-->
+  </div><!--col-md-4-->  
+
+  <div class="col-md-5">
+    <div class="invent-text">
+        <h1>Invent</h1>
+        <p>Create journeys with pictures and clues for other Inventurers to discover, leading them from stop to stop toward a final destination. Earn points and become ranked for each journey you invent.</p>
+    </div><!--1-text-right-->
+  </div><!--col-md-8-->
+
+ </div><!--row-->
+
+<div class="row">
+  <div class="landing-signup-row">
+    <div class="col-md-4 col-md-offset-4 signup-form">
+        <h2 class="mobileheader">Journey With Us!</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+      </div><!--field-->
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+      </div><!--field-->
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      </div><!--field-->
+
+      <div class="actions">
+        <%= f.submit "Sign up", class: "btn btn-primary" %>
+      </div><!--actions-->
+
+    <% end %>
+    </div><!--col-md-offset-4 signup-form-->
+  </div><!--landing-signup-row-->
+</div><!--row-->
