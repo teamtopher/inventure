@@ -68,7 +68,7 @@ h2 {
 	display: block;
 }
 
-.btn-primary body { color:#c3dfcf !important }
+.btn-primary body { color: #c3dfcf !important }
 
 .btn-secondary {
 	background-color: #578c7a;
@@ -94,13 +94,14 @@ img.clue-image { width:100%; }
 /* --------- Navigation Styles (Global) --------- */
 
 .landing-nav {
-	background: #97bec3;
+	background-color: #97bec3;
 }
 
 .navbackground {
-	background-color: #1a342f !important;
+	background-color: #578c7a !important;
 	border: none;
 }
+
 nav a {
 	color: #c3dfcf !important;
 }
@@ -113,16 +114,23 @@ nav a:hover {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 }
+
 .navbar-header img {
 	width: 100px;
 	height: auto;
-
 }
 
 .container-fluid .navbar-collapse {
 	margin-right: 0 !important;
-	background-color: #99c2c8;
+	background-color: #578c7a;
 }
+
+.landing-nav .navbar-collapse {
+	margin-right: 0 !important;
+	background-color:  #99c2c8;
+}
+
+
 .navbar-collapse li {
 	padding-left: 10px;
 	text-align: center;
@@ -132,7 +140,6 @@ nav a:hover {
 .icon-bar {
 	border: 1px white solid !important;
 }
-
 
 
 /* --------- Landing Page Styles --------- */
@@ -193,7 +200,7 @@ nav a:hover {
 }
 
 .identity h1 {
-	font-size: 3.7rem;
+	font-size: 4.5rem;
 	padding: 3% 0 0 0;
 	font-family: 'Montserrat', sans-serif;
 	color: #DCD5C7 !important;
@@ -211,6 +218,8 @@ nav a:hover {
 	font-family: 'Raleway', 'Montserrat', sans-serif;
 	color: #DCD5C7 !important;
 	text-align: left;
+	font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .explore-img {
@@ -345,6 +354,10 @@ label {
 
 @media screen and (max-width:1050px) {
 
+	.landing-nav .navbar-collapse {
+		background-color: #97bec3;
+	}
+
 	.hero-image {
 	 	width: 100%;
 	 	min-height: ;
@@ -356,9 +369,6 @@ label {
 		   background-size: cover;
 	}
 
-	.container-fluid .navbar-collapse {
-		background-color: #97bec3;
-	}
 
 	.hero-image h1 {
 		font-size: 1.5rem;
@@ -386,7 +396,7 @@ label {
 	}
 
 	label {
-		font-size: 1rem;
+		font-size: 1.3rem;
 	}
 }
 
@@ -424,10 +434,6 @@ label {
 
 	.identity p {
 		font-size: 1.3rem;
-	}
-
-	label {
-		font-size: 1rem;
 	}
 	
 	.col-md-4, .explore .col-md-3, .invent .col-md-3 {
