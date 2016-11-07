@@ -1,46 +1,78 @@
-<div class="row landing-nav">
-  <ul>
-    <li><%= link_to "Log In", new_user_session_path %></li>            
-    <li><%= link_to "Sign Up", new_user_registration_path %></li>   
+<div class="landing-nav">
+ <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+    <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+  <ul class="nav navbar-nav navbar-right">
+  <% if user_signed_in? %>
+      <li><%= link_to "Find a Journey", journeys_path %></li>
+      <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+      <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
+   <% else %>
+      <li><%= link_to "Log in", new_user_session_path %></li>
+      <li><%= link_to "Sign up", new_user_registration_path %></li>
+    <% end %>
+   
   </ul>
-</div><!--row landing-nav-->
+  </div><!--collapse navbar-collapse-->
+</div><!--landing-nav-->
 
 <div class="row">
   <div class="hero-image">
-    <%= image_tag "landing.jpg" %>
-    <p>A treasure hunt for places</p>
-    <h1><%= link_to "LET'S GO!", new_user_registration_path %></h1>
+
+    <div class="col-md-3 branding">
+        <h1>A treasure hunt for places</h1>
+        <h2><%= link_to "LET'S GO!", new_user_registration_path %></h2>
+    </div><!--col-md-4-->
+
   </div><!--hero-image-->
 </div><!--row-->
 
-<div class="row calltoaction ">
-  <p>Make your journey as exciting as your destination.</p>
-</div><!--row calltoaction-->
+<div class="row identity">
+    <h1>Make the journey as exciting as the destination.</h1>
+</div><!--row identity-->
 
-<div class="row">
-  <div class="col-md-4">
-    <div class="mobilelanding">
-      <div class="l-column-left">
-        <h1>Explore</h1>
-      </div>
-    </div><!--mobilelanding-->
+<div class="row identity">
+  <div class="col-md-3">
+    <h2>Invent Your Next Adventure</h2>
+    <p>Inventure is a community exploration app that lets you create and share treasure hunts for your favorite places and vendors. Are you ready to invent your next adventure?</p>
+  </div><!--col-md-3-->
+  <div class="col-md-3">
+    <h2>Explore Your Community</h2>
+    <p>Rather than tell you where to go or how to get there, Inventure offers a journey in your own community. Follow clues from stop to stop and earn points for discovering new places.</p>
+  </div><!--col-md-3-->
+</div><!--row identity-->
+
+<div class="row explore">
+  <div class="col-md-3">
+      <div class="explore-img">
+      </div><!--explore-img-->
   </div><!--col-md-4-->
 
-  <div class="col-md-8">
-      <div class="l-text-left">
-        <h1>Text Stuff</h1>
+  <div class="col-md-5">
+      <div class="explore-text">
+        <h1>Explore</h1>
+        <p>Explore the journeys of other Inventurers, following clues from stop to stop toward a final destination. Earn points and share your adventures with your friends.</p>
       </div>
   </div><!--col-md-8-->
 </div><!--row-->
 
-<div class="row">
-  <div class="l-column-right col-md-4">
-      <h1>Invent</h1>
-  </div><!--1-col-right col-md-4-->  
+<div class="row invent">
+  <div class="col-md-3 right">  
+    <div class="invent-img">
+    </div><!--invent-img-->
+  </div><!--col-md-4-->  
 
-  <div class="col-md-8">
-    <div class="l-text-right">
-        <h1>Text Stuff</h1>
+  <div class="col-md-5">
+    <div class="invent-text">
+        <h1>Invent</h1>
+        <p>Create journeys with pictures and clues for other Inventurers to discover, leading them from stop to stop toward a final destination. Earn points and become ranked for each journey you invent.</p>
     </div><!--1-text-right-->
   </div><!--col-md-8-->
 

@@ -5,14 +5,26 @@
 
 /* This is the primary stylesheet for the Inventure app.
 	
-	1. Text Styles (Global)
-	2. Button Styles
-	3. Navigation & Header Styles (Global)
-	4. Landing Page Styles
-	 
-
+	1. Container Styles (Global)
+	2. Text Styles (Global)
+	3. Button Styles
+	4. Navigation & Header Styles (Global)
+	5. Landing Page Styles
+	6. Responsive Layouts
 
  */
+
+/* --------- Container Styles (Global) --------- */
+
+body {
+	background-color: #1a342f;
+}
+
+.container-fluid {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
 
 /* --------- Text Styles (Global) --------- */
 
@@ -47,17 +59,20 @@ h2 {
 
 /* --------- Button Styles --------- */
 
-.btn { display: block; }
-
 .btn-link{ color: white; }
 
 .btn-primary {
 	background: #933e40;
 	border: none;
 	margin-bottom: 35px;
+	display: block;
 }
 
 .btn-primary body { color:#c3dfcf !important }
+
+.btn-secondary {
+	background-color: #578c7a;
+}
 
 .field { text-align: left !important; }
 
@@ -78,8 +93,12 @@ img.clue-image { width:100%; }
 
 /* --------- Navigation Styles (Global) --------- */
 
+.landing-nav {
+	background: #97bec3;
+}
+
 .navbackground {
-	background-color: #578c7a !important;
+	background-color: #1a342f !important;
 	border: none;
 }
 nav a {
@@ -102,6 +121,7 @@ nav a:hover {
 
 .container-fluid .navbar-collapse {
 	margin-right: 0 !important;
+	background-color: #99c2c8;
 }
 .navbar-collapse li {
 	padding-left: 10px;
@@ -114,79 +134,128 @@ nav a:hover {
 }
 
 
+
 /* --------- Landing Page Styles --------- */
 
-.landing-nav {
-	background: #9FC0C7;
-
-}
-.landing-nav ul{
-	list-style-type: none;	
-	text-align: right;
-	margin-right: 10px;
-}
-.landing-nav ul li {
-	display: inline;
-	margin-right: 15px;
-}
-
-.landing-nav a {
-		color: #1a342f;
+.hero-image {
+ 	width: 100%;
+ 	padding: 20.5% 0;
+ 	object-fit: cover;
+ 	min-height: 480px;
+ 	max-height: 600px;
+ 	background: url('landing.jpg') no-repeat center center;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: cover;
 }
 
-.calltoaction {
+.branding {
+	margin: auto 33.33333333% auto 41.66666667%;
+}
+
+.hero-image p {
+	height: 60%;
+	width: 100%;
+}
+
+.hero-image h1 {
+	text-align: center;
+	margin: 12% auto;
+	color: black;
+	font-size: 3rem;
+	font-family: 'Rancho', 'Montserrat', sans-serif;
+}
+
+.hero-image h2 {
+	text-align: center;
+	font-size: 2rem;
+	border: 2px solid black;
+	width: 60%;
+	margin: auto;
+	padding: 10px;
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.hero-image a {
+	color: black !important;
+}
+
+.identity {
 	width:100%;
-	min-height: 250px;
 	background-color: #913D42;
 	text-align: center;
 }
 
-.calltoaction p {
-	font-size: 3rem;
-	padding: 6% 0;
-	font-family: 'Raleway', sans-serif;
+.identity .col-md-3 {
+	margin-left: 16.66666667%;
+}
+
+.identity h1 {
+	font-size: 3.7rem;
+	padding: 3% 0 0 0;
+	font-family: 'Montserrat', sans-serif;
 	color: #DCD5C7 !important;
 }
 
-
-.landingcolumns {
-	height: 900px;
-	background-color: white;
-	border: 5px solid black;
-
+.identity h2 {
+	font-size: 2rem;
+	padding: 6% 0 0 0;
+	font-family: 'Raleway', 'Montserrat', sans-serif;
+	color: #DCD5C7 !important;
+	text-align: left;
 }
-.l-column-left{
-	background-color: green;
-	height:350px;
+
+.identity p {
+	font-family: 'Raleway', 'Montserrat', sans-serif;
+	color: #DCD5C7 !important;
+	text-align: left;
 }
-.l-column-right{
+
+.explore-img {
+	height: 270px;
+ 	background: url('explore-full.png') no-repeat center center;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;
+	margin: 20px 0 0 0;
+}
+
+.invent-img {
+	height: 270px;
+ 	background: url('invent.png') no-repeat center center;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;
+	margin: 20px;
+}
+
+.right {
 	float: right;
-	background-color: lightblue;
-	height:350px;
-
 }
 
-
-.landingcolumns h1 {
-	text-align: center;
-	font-size: 3rem;
-	padding-top: 150px;
-	font-family: 'Montserrat', sans-serif;
-	color: #1A3530 !important;
+.explore .col-md-3 {
+	margin-left: 16.66666667%;
 }
 
-.l-text-left {
-	height: 350px;
-	background-color: #913D42;
+.invent .col-md-3 {
+	margin-right: 16.66666667%;	
 }
 
-.l-text-right {
-	float: left;
-	height: 350px;
-	width: 100%;
-	background-color: #913D42;
+.invent .col-md-5 {
+	margin-left: 16.66666667%;
 }
 
+.explore-text, .invent-text {
+	padding-top: 60px;
+}
+
+.explore-text p, .invent-text p {
+	font-family: 'Raleway', 'Montserrat', sans-serif;
+}
 
 .landing-signup-row {
  	width: 100%;
@@ -210,14 +279,7 @@ nav a:hover {
 .signup-form .field {
 	margin-bottom: 40px;
 }
-.containerbackground {
-	background-color: #1a342f;
-	height: 100%;
-}
-body {
-	background-color: #1a342f;
 
-}
 .image {
 	width: 100%;
 	object-fit: cover;
@@ -243,15 +305,6 @@ body {
 
 }
 
-
-
- .hero-image img {
- 	width: 100%;
- 	object-fit: cover;
- 	max-height: 600px;
- }
-
-
 th.center {
 	font-weight: bolder;
 	background: white;
@@ -270,6 +323,8 @@ h1.all {
 	font-weight: normal;
 }
 
+
+
 .form h2 {
 	color: #DCD5C7;
 	margin-bottom: 5%;
@@ -280,68 +335,50 @@ h1.all {
 label {
 	font-size: 2rem;
 	font-weight: normal;
+}
+
+.landing-signup-row label {
 	color: #1a342f;
-
 }
 
-.container-fluid {
-	padding-left: 0px !important;
-	padding-right: 0px !important;
+/* --------- Responsive Layouts (Smaller Screen Styles) --------- */
 
-}
+@media screen and (max-width:1050px) {
 
-.hero-image h1 {
-	text-align: center;
-	font-size: 2rem;
-	border: 2px solid black;
-	width: 20%;
-	margin-left: 45%;
-	position: absolute;
-	margin-top: -11%;
-	padding: 10px;
-	border-radius: 5px;
-	font-family: 'Montserrat', sans-serif;
-}
+	.hero-image {
+	 	width: 100%;
+	 	min-height: ;
+	 	max-height: 100px;
+	 	background: url('mobilelanding.jpg') no-repeat center center;
+		   -webkit-background-size: cover;
+	 	   -moz-background-size: cover;
+	 	   -o-background-size: cover;
+		   background-size: cover;
+	}
 
-.hero-image p {
-	margin-top: -16%;
-	text-align: center;
-	width: 20%;
-	position: absolute;
-	margin-left: 45%;
-	color: black;
-	font-size: 3.3rem;
-	font-family: 'Rancho', 'Montserrat', sans-serif;
-}
+	.container-fluid .navbar-collapse {
+		background-color: #97bec3;
+	}
 
-.hero-image a {
-	color: black !important;
-}
+	.hero-image h1 {
+		font-size: 1.5rem;
+		width: 50%;
+	}
 
-/* --------- Small-Screen Styles --------- */
-
-@media screen and (max-width:1000px) {
+	.hero-image h2 {
+		font-size: 1.2rem;
+		width: 18%;
+		border: 1px solid black;	
+	}
 
 	.col-md-4 {
 		width: 50% !important;
 		margin: auto;
 	}
 
-	.calltoaction p {
+	.identity h1 {
 		font-size: 2.5rem;
 		padding: 8% 0;
-	}
-
-	.hero-image h1 {
-		font-size: 1.2rem;
-		width: 18%;
-		border: 1px solid black;	
-	}
-
-	.hero-image p {
-		font-size: 1rem;
-		width: 50%;
-		margin-left: 30%;
 	}
 
 	.form h2 {
@@ -357,58 +394,64 @@ label {
 
 	@media screen and (max-width:568px) {
 
-	.calltoaction p {
+	.hero-image {
+		padding: 48.5% 0;
+	}
+
+	.branding {
+		margin: auto;
+	}
+	.hero-image h1 {
+		font-size: 2.3rem;
+		margin: 12% 36% 2% 36%;
+	}
+
+	.hero-image h2 {
+	    font-size: 1.5rem;
+	    width: 27%;
+    	margin: auto 42%;
+	}
+
+	.identity h1 {
+		font-size: 2rem;
+		padding: 0;
+	}
+
+	.identity h2 {
+		font-size: 1.7rem;
+    	padding: 0;
+	}
+
+	.identity p {
 		font-size: 1.3rem;
-		padding-top: 15%;
 	}
 
 	label {
 		font-size: 1rem;
 	}
-
-	.calltoaction {
-		height: 125px;
-	}
 	
-	.col-md-4 {
+	.col-md-4, .explore .col-md-3, .invent .col-md-3 {
 		width: 100% !important;
 	}
 
-	.mobilelanding {
-		padding:0px;
+	.explore, .invent {
+		text-align: center;
 	}
 
-	.l-column-left {
-		height:100px;
-		margin: 0px;
+	.explore .col-md-3,
+	.invent .col-md-3,
+	.invent .col-md-5 {
+		margin: 0;
 	}
 
-	.l-column-right{
-		height:100px;
-		margin: 0px;
+	.invent-img, .explore-img {
+		height: 240px;
 	}
 
-	.landingcolumns {
-		height: 200px;
+	.explore-text, .invent-text {
+		padding-top: 0;
 	}
 
-	.landingcolumns h1 {
-		font-size: 2rem;
-		padding-top: 32.5px;
-		margin: 0px;
-	}
-
-
-	.hero-image h1 {
-		font-size: .8rem;
-		margin-top: -15%;
-	}
-	.hero-image p {
-		margin-top: -24%;
-		margin-left: 38%;
-		font-size: 1.5rem;
-		width: 30%;
-	}
 	.btn-primary {
 		width: 100%;
 		margin-left: auto;
