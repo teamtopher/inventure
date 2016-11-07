@@ -15,6 +15,16 @@
  */
 
 /* --------- Container Styles (Global) --------- */
+.btn-default {
+	top: 0 !important;
+}
+div[id^=flip] {
+  min-height: 25px;
+}
+div[id^=panel] {
+  min-height: 50px;
+  display:none;
+}
 
 body {
 	background-color: #1a342f;
