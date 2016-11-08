@@ -39,15 +39,19 @@ body {
 /* --------- Text Styles (Global) --------- */
 
 body, h1, h2, h3, h4, p, a, em, strong, label {
-	font-family: 'Cabin', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	color: white;
+}
+
+input {
+	font-family: 'Raleway', sans-serif !important;
 }
 
 h1.mobileheader{
 	text-align: center;
 }
 .center h2 {
-	color: #DCD5C7;
+	color: white;
 }
 
 h2 {
@@ -78,10 +82,14 @@ h2 {
 	display: block;
 }
 
+.landing-signup-row .btn-primary {
+	color: #1a342f !important;
+}
+
 .btn-primary body { color: #c3dfcf !important }
 
 .btn-secondary {
-	background-color: #578c7a;
+	background-color: #933e40;
 }
 
 .field { text-align: left !important; }
@@ -119,6 +127,11 @@ nav a {
 nav a:hover {
 	text-decoration: underline !important;
 }
+.navbar-right a:hover {
+	background: none !important;
+	text-decoration: underline !important;
+}
+
 .navbar-header {
 	padding: 10px;
 	margin-left: 0px !important;
@@ -141,11 +154,17 @@ nav a:hover {
 }
 
 
-.navbar-collapse li {
+.navbar-collapse li a {
 	padding-left: 10px;
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 2rem;
+	color: #1C3531;
+	border: 2px solid #1C3531;
+	border-radius: 5px;
+	margin-right: 10px;
+	padding: 5px;
 }
+
 
 .icon-bar {
 	border: 1px white solid !important;
@@ -167,8 +186,16 @@ nav a:hover {
 	   background-size: cover;
 }
 
+.hero-image a {
+	color: #1C3531;
+}
+
 .branding {
 	margin: auto 33.33333333% auto 41.66666667%;
+}
+
+#anchor {
+	text-decoration: none;
 }
 
 .hero-image p {
@@ -179,20 +206,21 @@ nav a:hover {
 .hero-image h1 {
 	text-align: center;
 	margin: 12% auto;
-	color: black;
+	color: #1C3531;
 	font-size: 3rem;
-	font-family: 'Rancho', sans-serif;
+	font-family: 'Rancho', cursive;
 }
 
 .hero-image h2 {
 	text-align: center;
 	font-size: 2rem;
-	border: 2px solid black;
+	color: #1C3531;
+	border: 3px solid #1C3531;
 	width: 60%;
 	margin: auto;
 	padding: 10px;
 	border-radius: 5px;
-	font-family: 'Cabin', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 .hero-image a {
@@ -211,25 +239,28 @@ nav a:hover {
 
 .identity h1 {
 	font-size: 4.5rem;
-	padding: 3% 0 0 0;
-	font-family: 'Montserrat', sans-serif;
-	color: #DCD5C7 !important;
+	padding: 20px 0 0 0;
+	font-family: 'Raleway', sans-serif;
+	color: white !important;
 }
 
 .identity h2 {
-	font-size: 2rem;
+	font-size: 3rem;
 	padding: 6% 0 0 0;
-	font-family: 'Raleway', 'Montserrat', sans-serif;
-	color: #DCD5C7 !important;
+	font-family: 'Raleway', sans-serif;
+	color: white !important;
 	text-align: left;
 }
 
 .identity p {
-	font-family: 'Raleway', 'Montserrat', sans-serif;
-	color: #DCD5C7 !important;
+	font-family: 'Raleway', sans-serif;
+	color: white !important;
 	text-align: left;
-	font-size: 1.5rem;
-    margin-bottom: 20px;
+	font-size: 2rem;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    margin: 0px !important;
+    line-height: 2.5rem;
 }
 
 .explore-img {
@@ -256,48 +287,58 @@ nav a:hover {
 	float: right;
 }
 
-.explore .col-md-3 {
+.landingcontainer {
+	padding-bottom: 20px;
+}
+
+.explore .col-md-5 {
 	margin-left: 16.66666667%;
 }
 
-.invent .col-md-3 {
+.invent .col-md-5 {
 	margin-right: 16.66666667%;	
 }
 
-.invent .col-md-5 {
+.invent .col-md-3 {
 	margin-left: 16.66666667%;
 }
 
 .explore-text, .invent-text {
-	padding-top: 60px;
+	padding-top: 20px;
+}
+.explore-text h1, .invent-text h1 {
+	font-family: 'Raleway', sans-serif;
 }
 
 .explore-text p, .invent-text p {
-	font-family: 'Raleway', 'Montserrat', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	font-size: 12px;
 }
 
 .landing-signup-row {
  	width: 100%;
  	min-height: 600px;
  	padding: 30px;
- 	background: url('signinbackground.jpg') no-repeat center center;
-	   -webkit-background-size: cover;
- 	   -moz-background-size: cover;
- 	   -o-background-size: cover;
-	   background-size: cover;
+ 	background-color: #97BCC2;
 }
 
 .signup-form {
 	min-height: 450px;
 	border-radius: 15px;
 	padding: 30px !important;
-	background: white;
-	opacity: 0.9;
+	background: #B0D8DA;
+	border: 3px solid #1a342f;
 }
 
 .signup-form .field {
 	margin-bottom: 40px;
 }
+
+.signup-form input {
+	background-color: #97BCC2;
+	border: 1px solid #1a342f;
+}
+
 
 .image {
 	width: 100%;
@@ -332,7 +373,7 @@ th.center {
 
 
 h1.all {
-	color: #DCD5C7;
+	color: white;
 }
 
 
@@ -340,15 +381,26 @@ h1.all {
 	color: #1a342f;
 	margin-bottom: 5%;
 	font-weight: normal;
+	font-family: 'Raleway', sans-serif !important;
+}
+
+.scrollingphotos {
+	height: 250px;
+	background: url('signinbackground.jpg') no-repeat;
+		   -webkit-background-size: cover;
+	 	   -moz-background-size: cover;
+	 	   -o-background-size: cover;
+		   background-size: cover;
+
 }
 
 
 
 .form h2 {
-	color: #DCD5C7;
+	color: white;
 	margin-bottom: 5%;
 	font-weight: normal;
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Raleway', sans-serif;
 }
 
 label {
@@ -358,6 +410,13 @@ label {
 
 .landing-signup-row label {
 	color: #1a342f;
+	font-family: 'Raleway', sans-serif;
+}
+
+.stop_btn {
+	border: 1px solid white !important;
+	border-radius: 10px !important;
+    padding: 5px !important;
 }
 
 /* --------- Responsive Layouts (Smaller Screen Styles) --------- */
@@ -414,6 +473,10 @@ label {
 
 	@media screen and (max-width:568px) {
 
+	.landing-nav .navbar-collapse {
+		margin-left: 15% !important;
+	}
+
 	.hero-image {
 		padding: 48.5% 0;
 	}
@@ -426,15 +489,19 @@ label {
 		margin-top: 65px;
     	padding-left: 25px;
     	margin-bottom: -.5px;
+    	
 	}
+
 	.hero-image h1 {
 		font-size: 2.3rem;
+
 	}
 
 	.hero-image h2 {
 	    font-size: 1.5rem;
 	    width: 27%;
     	margin: auto 42%;
+
 	}
 
 	.identity .col-md-3 {
@@ -442,8 +509,8 @@ label {
 	}
 
 	.identity h1 {
-		font-size: 2rem;
-		padding: 10px;
+		font-size: 2.5rem;
+		padding: 20px;
 	}
 
 	.identity h2 {
@@ -463,9 +530,9 @@ label {
 		text-align: center;
 	}
 
-	.explore .col-md-3,
-	.invent .col-md-3,
-	.invent .col-md-5 {
+	.explore .col-md-5,
+	.invent .col-md-5,
+	.invent .col-md-3 {
 		margin: 0;
 	}
 
@@ -475,6 +542,10 @@ label {
 
 	.explore-text, .invent-text {
 		padding-top: 0;
+	}
+
+	.right {
+		float: none;
 	}
 
 	.btn-primary {

@@ -28,14 +28,15 @@
 
     <div class="col-md-3 branding">
         <h1>A treasure hunt for places</h1>
-        <h2><%= link_to "LET'S GO!", new_user_registration_path %></h2>
+        <h2><a href="#anchor">Let's Go</a></h2>
     </div><!--col-md-4-->
 
   </div><!--hero-image-->
 </div><!--row-->
 
+<a id="anchor"/>
 <div class="row identity">
-    <h1>Make the journey as exciting as the destination.</h1>
+  <h1>Make the journey as exciting as the destination</h1>
 </div><!--row identity-->
 
 <div class="row identity">
@@ -49,39 +50,47 @@
   </div><!--col-md-3-->
 </div><!--row identity-->
 
+<div class="row">
+  <div class="scrollingphotos">
+
+  </div>
+</div>
+
+<div class="landingcontainer">
+<div class="row invent">
+<div class="invent-text">
+  <div class="col-md-5 right">  
+<h1>Invent</h1>
+        <p>Create journeys with pictures and clues for other Inventurers to discover, leading them from stop to stop toward a final destination. Earn points and become ranked for each journey you invent.</p>
+  </div><!--col-md-5-->  
+    </div><!--1-text-right-->
+
+  <div class="col-md-3">
+    <div class="invent-img">
+    </div><!--invent-img-->
+  </div><!--col-md-3-->
+
+ </div><!--row-->
+
 <div class="row explore">
+  <div class="col-md-5">
+      <div class="explore-text">
+      <h1>Explore</h1>
+        <p>Explore the journeys of other Inventurers, following clues from stop to stop toward a final destination. Earn points and share your adventures with your friends.</p>
+      </div>
+      </div><!--explore-img-->
+
   <div class="col-md-3">
       <div class="explore-img">
       </div><!--explore-img-->
-  </div><!--col-md-4-->
-
-  <div class="col-md-5">
-      <div class="explore-text">
-        <h1>Explore</h1>
-        <p>Explore the journeys of other Inventurers, following clues from stop to stop toward a final destination. Earn points and share your adventures with your friends.</p>
-      </div>
-  </div><!--col-md-8-->
 </div><!--row-->
-
-<div class="row invent">
-  <div class="col-md-3 right">  
-    <div class="invent-img">
-    </div><!--invent-img-->
-  </div><!--col-md-4-->  
-
-  <div class="col-md-5">
-    <div class="invent-text">
-        <h1>Invent</h1>
-        <p>Create journeys with pictures and clues for other Inventurers to discover, leading them from stop to stop toward a final destination. Earn points and become ranked for each journey you invent.</p>
-    </div><!--1-text-right-->
-  </div><!--col-md-8-->
-
- </div><!--row-->
+</div><!--col-md-4-->
+</div>
 
 <div class="row">
   <div class="landing-signup-row">
     <div class="col-md-4 col-md-offset-4 signup-form">
-        <h2 class="mobileheader">Journey With Us!</h2>
+        <h2 class="mobileheader">Journey With Us</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
@@ -100,7 +109,7 @@
       </div><!--field-->
 
       <div class="field">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :password_confirmation, "Password Confirmation" %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div><!--field-->
 

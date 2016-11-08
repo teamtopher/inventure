@@ -13,9 +13,9 @@
     </div>
   <% end %>
 
-<div id="flip" class="btn btn-primary">Step 1 - Add Journey Image</div>
+<div id="flip" class="btn btn-primary">Step 1 - Add Cover Photo</div>
     <div id ="panel">
-        <h2>STEP 1 - Add Journey Image</h2>
+        <h2>STEP 1 - Add Photo Cover</h2>
         <p>Take a picture of the thumbnail explorers will see when they select the journey.</p>
         <br>
         <h4>Tips</h4>
@@ -49,7 +49,7 @@
               <%= render 'clue_fields', f:builder %>
             <% end %>
 
-            <%= link_to_add_fields "Add Another Clue", f, :clues, class: "btn btn-primary" %>
+            <%= link_to_add_fields "Add Another Stop", f, :clues, class: "stop_btn btn btn-primary" %>
     </div>
         <hr>
 
