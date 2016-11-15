@@ -1,4 +1,4 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class First_imageUploader < CarrierWave::Uploader::Base
 
   include CarrierWave
 

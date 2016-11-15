@@ -4,6 +4,8 @@ class Journey < ActiveRecord::Base
 
 	 belongs_to :user
 	 mount_uploader :image, ImageUploader
+	 mount_uploader :first_image, First_imageUploader
+	mount_uploader :validation, ValidationUploader
 
 	 has_many :claims, :dependent => :destroy
 	end

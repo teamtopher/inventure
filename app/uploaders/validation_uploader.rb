@@ -1,6 +1,6 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class ValidationUploader < CarrierWave::Uploader::Base
 
-  include CarrierWave
+   include CarrierWave
 
   storage :file
   #storage :fog
