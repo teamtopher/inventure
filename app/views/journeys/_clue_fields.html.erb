@@ -1,13 +1,15 @@
 
-<%= f.label :image, "1. Take a picture of something near the last picture you took." %><br>
+<%= f.label :image, "Upload picture:" %>
+	<br /><br />
     <%= f.file_field :image, class: "btn btn-primary" %><br>
 
-<%= f.label :content, "2. Write a clue directing explorers from this picture to the previous stop." %><br />
-
+<%= f.label :content, "Write a clue directing explorers to this stop." %>
+	<br /><br />
     <%= f.text_area :content, class: "form-control" %><br>
     <br>
  
-   
+
 
     <%= f.hidden_field :_destroy %>
 
+   <hr>

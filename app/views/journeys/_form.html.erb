@@ -13,43 +13,25 @@
     </div>
   <% end %>
 
-<div class="step1 target" class="btn btn-primary">Step 1 - Add Cover Photo
-  
-        <h2>STEP 1 - Add Cover Photo</h2>
-        <p>This photo will represent the journey explorers will take.</p>
-        <br>
-        <h4>Tips</h4>
-            <ul>
-              <li>Make the photo eye-catching so it stands out!</li>
-              <li>Be vague. Don’t give away the final destination!</li>
-              <li>If explorers can guess the final destination, there’s no point doing the journey.</li>
-            </ul>
-        <br>
-          <%= f.file_field :image, class: "btn btn-primary" %><br>
-   
-    <hr>
-    <div id ="buttons">
-      <a class="Smallbutton btn btn-primary" id="showStep2" data-target=".step2">Next Step</a>
-     </div>
-    </div><!--step1 close-->
+<div class="step1 target" class="btn btn-primary">
+    <h2>1 - Add the Starting Point</h2>  
+    <br />
+    <p>Add a picture of the place where the journey begins.</p>
+    <%= f.file_field :first_image, class: "btn btn-primary" %>
+    <br />
+    <p>Name or describe the place.</p>
+    <%= f.text_area :first_clue, class: "form-control" %>
+        <br />
+
+    <div id="buttons"> 
+         <a class="Smallbutton btn btn-primary" id="showStep2" data-target=".step2">Next Step</a>
+    </div>
+</div><!--step1 close-->
 
 <div class="step2 target" style="display: none;">
-    <h2>Add First Stop</h2>
-      <%= f.text_area :first_clue, class: "form-control" %><br>
-      <%= f.file_field :first_image, class: "btn btn-primary" %>
-
-    <div id="buttons">  
-          <a class="Smallbutton btn btn-primary" id="showStep1" data-target=".step1">Previous</a>
-         <a class="Smallbutton btn btn-primary" id="showStep3" data-target=".step3">Next</a>
-    </div>
-</div>
-
-
- <div class="step3 target" style="display: none;">
-Step 2 - Add Stops  
-
-        <h2>STEP 2 - Add Stops</h2>
-        <p>A stop is a photo paired with a clue that leads the explorer to the next stop, then ultimately the final destination. </p> 
+    <h2>2 - Add Stops</h2> 
+      <!--
+        <p>A stop is a photo paired with a clue that leads the explorer to the next stop, then ultimately the final destination.</p> 
         <br>
         <h4>Tips</h4>
           <ul>
@@ -61,44 +43,68 @@ Step 2 - Add Stops
               <li>Go left until you find "X" put your back to it and you can see your next stop.</li>
             </ul></li>
           </ul>
-          <br>
+      -->
+    <p>Add a picture of the first stop on your journey.</p>
+    <br>
             <%= f.fields_for :clues do |builder| %>
               <%= render 'clue_fields', f:builder %>
             <% end %>
+      <p>Add more stops or hit Next to finish.</p>
+      <br />
+      <%= link_to_add_fields "Add Another Stop", f, :clues, class: "stop_btn btn btn-primary" %>
 
-            <%= link_to_add_fields "Add Another Stop", f, :clues, class: "stop_btn btn btn-primary" %>
+
+
       <div id="buttons">  
-          <a class="Smallbutton btn btn-primary" id="showStep1" data-target=".step1">Previous</a>
-         <a class="Smallbutton btn btn-primary" id="showStep3" data-target=".step3">Next</a>
-       </div>
-        Step 3 - Name and Rate
-       
-        <h2>STEP 3 - Name and Rate Your Journey</h2> 
-            <%= f.label :name, "Add a name for your journey." %>
+        <a class="Smallbutton btn btn-primary" id="showStep3" data-target=".step3">Next</a>
+        <a class="Smallbutton btn btn-primary" id="showStep1" data-target=".step1">Previous</a>
+      </div>
+
+</div><!--step2 target-->
+
+<div class="step3 target" style="display: none;">
+
+        <h2>3 - Name &amp; Rate</h2> 
+            <%= f.label :name, "Add a name for your journey:" %>
+            <br /><br />
             <%= f.text_area :name, class: "form-control" %>
             <br />
             <br />
 
-            <%= f.label :description, "Add 2-3 tags that describe your journey (e.g., hungry, hipster, nighttime)." %>
+            <%= f.label :description, "Add 2-3 tags that describe your journey (e.g., hungry, nighttime):" %>
+            <br /><br />
             <%= f.text_area :description, class: "form-control" %>
             <br />
             <br />
-          <p>Rate the difficulty from 1-5.</p>
+          <p>Rate the difficulty from 1-5:</p>
+            <br />
             <%= f.number_field :difficulty, class: "form-control" %>
-            <br>
-      
-      <h2>Add Answer Image</h2>
-      <%= f.text_area :validation, class: "form-control" %><br>
-      <%= f.file_field :validation, class: "btn btn-primary" %>
+            <br /><br />
 
-      <div id ="buttons">
-         <a class="Smallbutton btn btn-primary" id="showStep2" data-target=".step2">Previous</a><br><br>
-         <div class="form-group">
-          <%= f.submit class: "btn btn-lg btn-primary btn-block" %>
-        </div>
+      <div id="buttons">  
+          <a class="Smallbutton btn btn-primary" id="showStep4" data-target=".step4">Next</a>
+          <a class="Smallbutton btn btn-primary" id="showStep2" data-target=".step2">Previous</a>
       </div>
+
 </div><!--step3 close-->
 
+<div class="step4 target" style="display: none;">  
+      <h2>4 - Add Confirmation</h2>
+      <p>Add a picture of the destination for users to see when they complete the journey:</p>
+      <br />
+      <%= f.file_field :validation, class: "btn btn-primary" %>
+      <br />
+      <p>Add the name of the destination:</p>
+      <%= f.text_area :validation, class: "form-control" %><br>
+      <br /><br />
+      <div id ="buttons">         
+          <div class="form-group">
+            <%= f.submit class: "btn btn-lg btn-primary btn-block" %><br><br>
+            <a class="Smallbutton btn btn-primary" id="showStep4" data-target=".step3">Previous Step</a>
+          </div>
+      </div>
+</div><!--step4 close-->
+</div><!--form-->
 <% end %>
 <%= javascript_tag do %>
 $(document).ready(function () {

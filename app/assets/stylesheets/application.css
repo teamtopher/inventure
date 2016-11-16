@@ -37,6 +37,10 @@ body {
 	padding-right: 0px !important;
 }
 
+.row {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
 
 /* --------- Text Styles (Global) --------- */
 
@@ -65,11 +69,6 @@ h2 {
 	font-size: 1.8rem;
 	text-align: center;
 
-}
-
-.row {
-	margin-left: 0px !important;
-	margin-right: 0px !important;
 }
 
 
@@ -394,8 +393,6 @@ h1.all {
 
 }
 
-
-
 .form h2 {
 	color: white;
 	margin-bottom: 5%;
@@ -428,8 +425,7 @@ label {
 	}
 
 	.hero-image {
-	 	width: 100%;
-	 	
+	 	width: 100%;	
 	 	max-height: 100px;
 	 	background: url('mobilelanding.jpg') no-repeat center center;
 		   -webkit-background-size: cover;
@@ -471,10 +467,19 @@ label {
 
 /* --------- Mobile Styles: Turn into default styles! --------- */
 
-	@media screen and (max-width:568px) {
+@media screen and (max-width:568px) {
 
 	.landing-nav .navbar-collapse {
 		margin-left: 15% !important;
+	}
+
+	p, label {		/* For more readable mobile text */
+		font-size: 1.9rem;
+	}
+
+	.form h2 {
+		text-align: left;
+		font-size: 2.5rem;
 	}
 
 	.hero-image {
@@ -489,19 +494,16 @@ label {
 		margin-top: 65px;
     	padding-left: 25px;
     	margin-bottom: -.5px;
-    	
 	}
 
 	.hero-image h1 {
 		font-size: 2.3rem;
-
 	}
 
 	.hero-image h2 {
 	    font-size: 1.5rem;
 	    width: 27%;
     	margin: auto 42%;
-
 	}
 
 	.identity .col-md-3 {
@@ -558,5 +560,27 @@ label {
 		min-height: 400px;
 	}
 
+	.add_fields { /* Making "Add Another Stop" on journey creation into a button */
+		width: 45%;
+		display: block;
+		margin: 0 0 35px;
+		background: #97bec3;
+		border: none;
+		border-radius: 4px;
+		padding: 6px 12px;
+    	font-size: 14px;
+    	line-height: 1.42857143;
+   	 	text-align: center;
+    	vertical-align: middle;
+ 	   -ms-touch-action: manipulation;
+    	touch-action: manipulation;
+    	cursor: pointer;
+    	white-space: nowrap;
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+
+	}
 
 }
