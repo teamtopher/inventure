@@ -16,7 +16,15 @@
 
 /* --------- Container Styles (Global) --------- */
 
-
+.clue-container img {
+	width: 100% !important;
+	height: auto;
+}
+.clue-container ul li, .clue-container p {
+	font-size: 2.5rem;
+	text-align: center;
+	list-style: none;
+}
 .btn-default {
 	top: 0 !important;
 }

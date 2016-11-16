@@ -14,30 +14,32 @@
 <%= f.hidden_field :points, :value => @journey.difficulty * 50 %>
 
 <strong>Clues:</strong>
-  <div class="row">
-  <%= @journey.first_clue %><br><%= image_tag @journey.first_image_url %>
-    <ol>
+  <div class="row clue-container">
+    <p><%= @journey.first_clue %><br><%= image_tag @journey.first_image_url %></p>
+    <ul class="clue">
 
       <% for clue in @journey.clues %>
-            <li><%= clue.content %>
+            <li class="clue-image"><%= clue.content %>
             <%= image_tag clue.image_url, class: "clue-image" %></li>
             <br>
       <% end %>
-    </ol>
+    </ul>
   </div>
-  <button type="button" class="btn btn-primary">Show Next Clue</button>
-
-    <button type="button" class="btn btn-primary">Found It!</button>
-    <ul><li><%= @journey.validation%><br>
+  <button type="button" class="clues btn btn-primary">Show Next Clue</button>
+  <div class="clue-container">
+    <button type="button" class="found btn btn-primary">Found It!</button>
+    <ul class="validation"><li class="final"><%= @journey.destination %><br><br>
     <%= image_tag @journey.validation_url %></li></ul>
+  </div>
 <% end %>
+
 <script>
-$('ol > li').hide();
-$('button').click(function() {
-    $('ol > li:hidden:first').show();
+$('ul.clue > li.clue-image').hide();
+$('button.clues').click(function() {
+    $('ul.clue > li.clue-image:hidden:first').show();
 });
-$('ul > li').hide();
-$('button').click(function() {
-    $('ul > li:hidden:first').show();
+$('ul.validation > li.final').hide();
+$('button.found').click(function() {
+    $('ul.validation > li.final:hidden:first').show();
 });
 </script>

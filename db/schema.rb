@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115232611) do
+ActiveRecord::Schema.define(version: 20161116211944) do
 
   create_table "claims", force: :cascade do |t|
     t.string   "answer"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20161115232611) do
     t.text     "first_clue"
     t.string   "first_image"
     t.string   "validation"
+    t.text     "destination"
   end
 
   create_table "users", force: :cascade do |t|
