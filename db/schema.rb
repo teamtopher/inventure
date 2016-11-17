@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116211944) do
+ActiveRecord::Schema.define(version: 20161117212733) do
 
   create_table "claims", force: :cascade do |t|
     t.string   "answer"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20161116211944) do
     t.integer  "creator_id"
     t.integer  "explorer_id"
     t.integer  "points"
+    t.string   "validation"
   end
 
   create_table "clues", force: :cascade do |t|

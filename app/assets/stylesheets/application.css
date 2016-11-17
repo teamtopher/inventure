@@ -15,7 +15,10 @@
  */
 
 /* --------- Container Styles (Global) --------- */
-
+img {
+	width: 100%;
+	height: auto;
+}
 .clue-container img {
 	width: 100% !important;
 	height: auto;
@@ -476,7 +479,10 @@ label {
 /* --------- Mobile Styles: Turn into default styles! --------- */
 
 @media screen and (max-width:568px) {
-
+	.col-md-6 {
+		width: 50% !important;
+		float: left;
+	}
 	.landing-nav .navbar-collapse {
 		margin-left: 15% !important;
 	}

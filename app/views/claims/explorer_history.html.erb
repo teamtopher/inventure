@@ -15,10 +15,10 @@
 
     <% @claims.each do |claim| %>
       <tr>
-        <td class="center"><%= claim.journey.name %></td>
-        <td class="center"><%= claim.answer %></td>
+        <td class="center"><%= link_to claim.journey.name, @journey_claims_path %></td>
         <td class="center"><%= claim.created_at.strftime("%B %-d, %Y") %></td>
         <td class="center"><%= claim.points %></td>
+        <td class="center"><%= image_tag claim.validation_url %></td>
       </tr>
     <% end %>
   </table>

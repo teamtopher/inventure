@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Answer:</strong>
   <%= @claim.answer %>
@@ -14,6 +13,5 @@
   <strong>Journey:</strong>
   <%= @claim.journey_id %>
 </p>
+<%= image_tag @claim.validation_url %>
 
-<%= link_to 'Edit', edit_claim_path(@claim) %> |
-<%= link_to 'Back', claims_path %>

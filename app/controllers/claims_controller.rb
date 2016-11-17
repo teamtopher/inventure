@@ -13,14 +13,26 @@ class ClaimsController < ApplicationController
     @claims = Claim.all.where(explorer: current_user).order("created_at DESC")
     @journeys = Journey.all
   end
+  def profile
+      @claims = Claim.all.where(creator: current_user).order("created_at DESC")
+      @claims = Claim.all.where(explorer: current_user).order("created_at DESC")
+
+  end 
+  def scoreboard
+    @claims = Claim.all
+    @journeys = Journey.all
+  end 
+
 
   def index
     @claims = Claim.all
+    @journeys = Journey.all
   end
 
   # GET /claims/1
   # GET /claims/1.json
   def show
+    @journeys = Journey.all
   end
 
   # GET /claims/new
@@ -48,7 +60,7 @@ class ClaimsController < ApplicationController
 
     respond_to do |format|
       if @claim.save
-        format.html { redirect_to explorer_history_url, notice: 'Claim was successfully created.' }
+        format.html { redirect_to journey_claims_path, notice: 'Claim was successfully created.' }
         format.json { render :show, status: :created, location: @claim }
       else
         format.html { render :new }
@@ -89,6 +101,6 @@ class ClaimsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def claim_params
-      params.require(:claim).permit(:answer, :user_id, :journey_id, :points)
+      params.require(:claim).permit(:validation, :answer, :user_id, :journey_id, :points)
     end
 end

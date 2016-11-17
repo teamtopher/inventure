@@ -18,6 +18,7 @@ class JourneysController < ApplicationController
   # GET /journeys/1
   # GET /journeys/1.json
   def show
+
   end
 
   # GET /journeys/new
