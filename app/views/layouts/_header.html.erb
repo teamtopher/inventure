@@ -3,7 +3,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
 
-      <%= link_to image_tag("logo.png"), journeys_path %>
+      <%= link_to image_tag("logo.png"), pages_choose_path %>
 
 
 
@@ -21,9 +21,9 @@
 
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-         <li><%= link_to "Creator History", creator_history_path %></li>
-          <li><%= link_to "Explorer History", explorer_history_path %></li>
-          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+         <li><%= link_to "Explore", journeys_path %></li>
+          <li><%= link_to "Invent", new_journey_path %></li>
+          <li><%= link_to "Profile", profile_path %></li>
        		<li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
        <% else %>
           <li><%= link_to "Log in", new_user_session_path %></li>

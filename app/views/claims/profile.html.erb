@@ -1,8 +1,9 @@
-<h1><%= @current_user.email %>'s Profile</h1>
+<h1><%= @current_user.username %>'s Profile</h1>
 <div class="center">
   <h2>Creator History: Who's Finished Your Journeys?</h2>
 </div>
 
+<h3><%= link_to "Edit Profile", edit_user_registration_path %></h3>
 
 <div class="table-responsive">
 <table class="table table-bordered">
