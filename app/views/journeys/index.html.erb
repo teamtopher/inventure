@@ -9,7 +9,7 @@
     <% @journeys.each do |journey| %>
       <div class="col-md-4">
         <%= link_to journey do %>
-        <%= image_tag journey.image_url, class: "image" %>
+        <%= image_tag journey.first_image_url, class: "image" %>
         <div class="overlay">
           <h3><%= journey.name %></h3>
           <h4>Difficulty: <%= journey.difficulty %></h4>
