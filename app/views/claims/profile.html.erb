@@ -19,8 +19,9 @@
   <% @claims.each do |claim| %>
     <tr>
       <td class="center"><%= claim.journey.name %></td>
-      <td class="center"><%= claim.explorer.email %></td>
-      <td class="center"><%= claim.answer %></td>
+      <td class="center"><%= claim.explorer.username %></td>
+      <td class="center"><%= image_tag claim.validation_url %></td>
+</td>
       <td class="center"><%= claim.created_at.strftime("%B %-d, %Y") %></td>
     </tr>
   <% end %>
@@ -36,10 +37,11 @@
 <div class="table-responsive">
   <table class="table table-bordered">
     <tr>
-      <th class="center">Journeys</th>
-      <th class="center">Your Answer</th>
+      <th class="center">Journey Name</th>
       <th class="center">Completed?</th>
       <th class="center">Points Earned</th>
+      <th class="center">Your Answer</th>
+
     </tr>
 
     <% @claims.each do |claim| %>
