@@ -1,9 +1,11 @@
-<h1><%= @current_user.username %>'s Profile</h1>
+<h1><!--<%= @current_user.username %>'s-->Your Profile</h1>
+<button class="btn btn-primary"><%= link_to "Edit Profile", edit_user_registration_path %></button>
+
 <div class="row">
   <h2>Creator History: Who's Finished Your Journeys?</h2>
 </div><!-- row -->
 
-<h3><%= link_to "Edit Profile", edit_user_registration_path %></h3>
+
 
 <div class="table-responsive">
 <table class="table table-bordered">

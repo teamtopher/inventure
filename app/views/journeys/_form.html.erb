@@ -12,8 +12,9 @@
       </ul>
     </div>
   <% end %>
-
+<h1>Invent</h1>
 <div class="step1 target" class="btn btn-primary">
+    
     <h2>1 - Add the Starting Point</h2>  
     <br />
     <p>Add a picture of the place where the journey begins.</p>
@@ -49,7 +50,7 @@
             <%= f.fields_for :clues do |builder| %>
               <%= render 'clue_fields', f:builder %>
             <% end %>
-      <p>Add more stops or hit Next to finish.</p>
+      <p>Add more stops or hit Next to continue.</p>
       <br />
       <%= link_to_add_fields "Add Another Stop", f, :clues, class: "stop_btn btn btn-primary" %>
 

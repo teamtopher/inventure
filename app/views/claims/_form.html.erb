@@ -15,11 +15,12 @@
 
 <strong>Clues:</strong>
   <div class="row clue-container">
-    <p><%= @journey.first_clue %><br><%= image_tag @journey.first_image_url %></p>
+    <p><%= @journey.first_clue %></p><br>
+    <p><%= image_tag @journey.first_image_url %></p>
     <ul class="clue">
 
       <% for clue in @journey.clues %>
-            <li class="clue-image"><%= clue.content %>
+            <li class="clue-image"><%= clue.content %><br /><br />
             <%= image_tag clue.image_url, class: "clue-image" %></li>
       <% end %>
 
@@ -29,11 +30,11 @@
   <div class="clue-container">
   <button type="button" class="found btn btn-primary">Found It!</button>
       <ul class="validation">
-      <li class="final"><%= @journey.destination %><br><br>
-      <%= image_tag @journey.validation_url %><br>
-      <h1>Now that you've found it, upload a selfie of the location</h1><br>
-      <%= f.file_field :validation %><br>
-      <%= f.submit "Add your own", class: "btn btn-primary" %></li>
+      <li class="final"><h1>Are you here?</h1><%= image_tag @journey.validation_url %><br><br><%= @journey.destination %>
+      <br>
+      <h2>Now that you've found it, upload a selfie of the location</h2><br>
+      <button class="btn btn-secondary"><%= f.file_field :validation %></button><br /><br />
+      <%= f.submit "Upload", class: "btn btn-primary" %></li>
       </ul>
   </div>
 
