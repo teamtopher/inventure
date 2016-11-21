@@ -16,7 +16,7 @@ class ClaimsController < ApplicationController
   def profile
       @claims = Claim.all.where(creator: current_user).order("created_at DESC")
       @claims = Claim.all.where(explorer: current_user).order("created_at DESC")
-
+      
   end 
   def scoreboard
     @claims = Claim.all

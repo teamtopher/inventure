@@ -527,9 +527,10 @@ label {
 	}
 
 	.logo {
-		width: 270px;
-		margin: 0 10%;
+		width: 220px;
+		margin: 0 20%;
 		padding: 0;
+		
 	}
 	p, label {		/* For more readable mobile text */
 		font-size: 1.9rem;
