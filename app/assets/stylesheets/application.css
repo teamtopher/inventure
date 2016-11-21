@@ -15,6 +15,18 @@
  */
 
 /* --------- Container Styles (Global) --------- */
+
+.logo {
+	width: 300px;
+    margin: 0%;
+    padding: 0;
+}
+
+.landing-nav img {
+margin: 0 auto;
+
+}
+
 img {
 	width: 100%;
 	height: auto;
@@ -124,7 +136,7 @@ img.clue-image { width:100%; }
 /* --------- Navigation Styles (Global) --------- */
 
 .landing-nav {
-	background-color: #97bec3;
+	background-color: #98C2C8;
 }
 
 .navbackground {
@@ -157,12 +169,10 @@ nav a:hover {
 
 .container-fluid .navbar-collapse {
 	margin-right: 0 !important;
-	background-color: #578c7a;
 }
 
 .landing-nav .navbar-collapse {
 	margin-right: 0 !important;
-	background-color:  #99c2c8;
 }
 
 
@@ -185,11 +195,11 @@ nav a:hover {
 
 .hero-image {
  	width: 100%;
- 	padding: 20.5% 0;
+ 	padding: 4% 0;
  	object-fit: cover;
- 	min-height: 480px;
+ 	min-height: 500px;
  	max-height: 600px;
- 	background: url('landing.jpg') no-repeat center center;
+ 	background: url('landing_no_logo.jpg') no-repeat center center;
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
  	   -o-background-size: cover;
@@ -239,8 +249,8 @@ nav a:hover {
 
 .identity {
 	width:100%;
-	background-color: #913D42;
 	text-align: center;
+	background-color: #E6FFF2;
 }
 
 .identity .col-md-3 {
@@ -249,17 +259,26 @@ nav a:hover {
 
 .identity h1 {
 	font-size: 4.5rem;
-	padding: 20px 0 0 0;
-	font-family: 'Raleway', sans-serif;
+	padding: 20px 0 20px 0;
+	font-family: 'montserrat', sans-serif;
 	color: white !important;
+	background-color: #4BA966;
+	margin: 0px 0 0;
+}
+.background {
+	background-color: #E6FFF2;
+}
+.background h2, .background p{
+	color: black;
 }
 
 .identity h2 {
 	font-size: 3rem;
-	padding: 6% 0 0 0;
+	padding: 20px 0 0 0;
 	font-family: 'Raleway', sans-serif;
-	color: white !important;
-	text-align: left;
+	color: black !important;
+	margin: 0 20% 40px;
+	text-align: justify-all;
 }
 
 .identity p {
@@ -273,8 +292,13 @@ nav a:hover {
     line-height: 2.5rem;
 }
 
+.scrollingphotos {
+	margin: 0 2% 40px;
+	max-height: 200px;
+}
+
 .explore-img {
-	height: 270px;
+	height: 200px;
  	background: url('explore-full.png') no-repeat center center;
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
@@ -284,7 +308,7 @@ nav a:hover {
 }
 
 .invent-img {
-	height: 270px;
+	height: 200px;
  	background: url('invent.png') no-repeat center center;
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
@@ -293,43 +317,42 @@ nav a:hover {
 	margin: 20px;
 }
 
-.right {
-	float: right;
-}
+.repeat-img {
+		height: 200px;
+		background: url('explore-full.png') no-repeat center center;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;
+	   	margin: 20px 0 0 0;		
+	}
 
-.landingcontainer {
+.landing-info {
+	text-align: center;
 	padding-bottom: 20px;
 }
 
-.explore .col-md-5 {
-	margin-left: 16.66666667%;
-}
-
-.invent .col-md-5 {
-	margin-right: 16.66666667%;	
+.landing-info h2 {
+	color: #913D42;
+	font-weight: bold;
+	font-family: serif;
+	letter-spacing: 3px;
 }
 
 .invent .col-md-3 {
 	margin-left: 16.66666667%;
 }
 
-.explore-text, .invent-text {
-	padding-top: 20px;
-}
-.explore-text h1, .invent-text h1 {
-	font-family: 'Raleway', sans-serif;
-}
-
-.explore-text p, .invent-text p {
-	font-family: 'Raleway', sans-serif;
-	font-size: 12px;
-}
 
 .landing-signup-row {
  	width: 100%;
  	min-height: 600px;
  	padding: 30px;
- 	background-color: #97BCC2;
+	background: url('signinbackground.jpg') no-repeat;
+		   -webkit-background-size: cover;
+	 	   -moz-background-size: cover;
+	 	   -o-background-size: cover;
+		   background-size: cover;
 }
 
 .signup-form {
@@ -432,7 +455,7 @@ label {
 @media screen and (max-width:1050px) {
 
 	.landing-nav .navbar-collapse {
-		background-color: #97bec3;
+		background-color: #98C2C8;
 	}
 
 	.hero-image {
@@ -448,7 +471,6 @@ label {
 
 	.hero-image h1 {
 		font-size: 1.5rem;
-		width: 50%;
 	}
 
 	.hero-image h2 {
@@ -487,6 +509,15 @@ label {
 		margin-left: 15% !important;
 	}
 
+	.background, .identity {
+		background-color: #98C2C8;
+	}
+
+	.logo {
+		width: 270px;
+		margin: 0 10%;
+		padding: 0;
+	}
 	p, label {		/* For more readable mobile text */
 		font-size: 1.9rem;
 	}
@@ -496,22 +527,17 @@ label {
 		font-size: 2.5rem;
 	}
 
-	.hero-image {
-		padding: 48.5% 0;
-	}
-
 	.branding {
-		margin: auto;
+		margin: 20px 0 0;
 	}
 
 	.branding h1 {
-		margin-top: 65px;
     	padding-left: 25px;
-    	margin-bottom: -.5px;
 	}
 
 	.hero-image h1 {
 		font-size: 2.3rem;
+		margin: 0 0 30px;
 	}
 
 	.hero-image h2 {
@@ -527,19 +553,39 @@ label {
 	.identity h1 {
 		font-size: 2.5rem;
 		padding: 20px;
+		background-color: #98C2C8;
 	}
 
 	.identity h2 {
 		font-size: 2rem;
-    	padding: 0;
+		color: white !important;
+    	padding: 20px;
+    	margin: 20px 0 0;
+    	background-color: #913D42;
+    	text-align: justify-all;
 	}
 
 	.identity p {
 		font-size: 1.3rem;
 	}
 	
-	.col-md-4, .explore .col-md-3, .invent .col-md-3 {
+	.landing-info h2 {
+		color: #913D42;
+		font-weight: bold;
+		font-family: serif;
+		letter-spacing: 3px;
+	}
+
+	.landing-info p {
+	font-size: 2.2rem;
+    line-height: normal;
+    margin: 20px;
+    padding: 0 50px;
+	}
+
+	.col-md-4, .col-md-3 {
 		width: 100% !important;
+		padding: 0;
 	}
 
 	.explore, .invent {
@@ -552,8 +598,26 @@ label {
 		margin: 0;
 	}
 
-	.invent-img, .explore-img {
-		height: 240px;
+	.invent-img, .explore-img, .repeat-img {
+		height: 120px;
+		margin: 0;
+		background-color: #578c7a;
+	}
+	.invent-img {
+		background: url('explore-full.png') no-repeat left;
+		background-color: #578c7a;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;
+	}
+	.repeat-img {
+		background: url('explore-full.png') no-repeat right;
+		background-color: #578c7a;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;		
 	}
 
 	.explore-text, .invent-text {
