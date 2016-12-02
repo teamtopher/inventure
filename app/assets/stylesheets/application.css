@@ -31,6 +31,9 @@ img {
 	width: 100%;
 	height: auto;
 }
+ul.clue {
+	padding-left: 0 !important;
+}
 .clue-container img {
 	width: 100% !important;
 	height: auto;
@@ -40,11 +43,9 @@ img {
     line-height: normal;
     text-align: center;
     list-style: none;
-    margin: 40px 10px 0;
 }
 
 .clue-container img {
-	padding: 30px;
 	border-bottom: 1px solid white;
 }
 

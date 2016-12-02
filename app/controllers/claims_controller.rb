@@ -25,8 +25,9 @@ class ClaimsController < ApplicationController
 
 
   def index
-    @claims = Claim.all
+     @claims = Claim.all
     @journeys = Journey.all
+
   end
 
   # GET /claims/1

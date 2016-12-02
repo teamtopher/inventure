@@ -22,7 +22,8 @@
 <div class="center">
       <%= link_to "Let's Go!", new_journey_claim_path(@journey), class: "btn btn-primary" %>
     </div>
-
-
+<% if @journey.user == current_user %>
+	<%= link_to 'Edit', edit_journey_path(@journey) %> |
+<% end %>
 <%= link_to 'Back', journeys_path %>
 </div>

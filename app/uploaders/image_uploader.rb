@@ -1,9 +1,9 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
-  include CarrierWave
-
-  #storage :file
-  storage :fog
+include CarrierWave::ImageOptimizer
+  storage :file
+  #storage :fog
+  process :optimize
 
 
   def store_dir

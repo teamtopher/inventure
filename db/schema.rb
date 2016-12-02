@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118204355) do
+ActiveRecord::Schema.define(version: 20161202191419) do
 
   create_table "claims", force: :cascade do |t|
     t.string   "answer"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20161118204355) do
     t.integer  "journey_id"
     t.text     "username"
     t.string   "image"
+    t.boolean  "admin"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

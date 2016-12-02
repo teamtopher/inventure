@@ -12,6 +12,6 @@ def configure_permitted_parameters
   def after_sign_in_path_for(resource)
 	  pages_choose_path
 	end
-  
+
   
 end

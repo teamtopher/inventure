@@ -53,6 +53,9 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    carrierwave-imageoptimizer (1.4.0)
+      carrierwave (>= 0.8, < 2.0)
+      image_optimizer (~> 1.6)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -204,6 +207,7 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
+    image_optimizer (1.7.0)
     inflecto (0.0.2)
     ipaddress (0.8.3)
     jbuilder (2.6.0)
@@ -230,6 +234,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     pg (0.19.0)
+    pg (0.19.0-x86-mingw32)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -322,6 +327,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   carrierwave (>= 1.0.0.beta, < 2.0)
+  carrierwave-imageoptimizer
   coffee-rails (~> 4.1.0)
   devise
   figaro

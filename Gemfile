@@ -15,6 +15,7 @@ gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "figaro"
 gem "fog"
+gem 'carrierwave-imageoptimizer'
 
 group :production do 
 	gem 'pg'

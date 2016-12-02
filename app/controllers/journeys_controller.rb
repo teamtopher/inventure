@@ -82,9 +82,11 @@ class JourneysController < ApplicationController
     def journey_params
       params.require(:journey).permit(:destination, :validation, :first_clue, :first_image, :user_id, :answer, :image, :remote_image_url, :name, :difficulty, :description, clues_attributes: [:remote_image_url, :image, :content, :id, :_destroy])
     end
-    def check_user
+  
+     def check_user
       if current_user != @journey.user
         redirect_to root_url, alert: "Sorry, this journey belongs to someone else."
       end
     end
+
 end
