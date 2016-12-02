@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "figaro"
 gem "fog"
 gem 'carrierwave-imageoptimizer'
+gem 'ratyrate'
 
 group :production do 
 	gem 'pg'
