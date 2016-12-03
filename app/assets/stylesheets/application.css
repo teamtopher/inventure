@@ -15,7 +15,22 @@
  */
 
 /* --------- Container Styles (Global) --------- */
+.scrapbook h1{
+	font-size: 2rem;
+		text-align: center;
 
+}
+.scrapbook h2 {
+	padding-left: 0px;
+	text-align: center;
+	font-size: 1.7rem !important;
+}
+.scrapbook {
+	border: 1px solid white;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+
+}
 .logo {
 	width: 300px;
     margin: 0%;

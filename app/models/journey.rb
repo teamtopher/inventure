@@ -8,4 +8,5 @@ class Journey < ActiveRecord::Base
 	mount_uploader :validation, ValidationUploader
 
 	 has_many :claims, :dependent => :destroy
+	 ratyrate_rateable "experience"
 	end

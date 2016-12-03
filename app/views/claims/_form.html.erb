@@ -13,6 +13,7 @@
 
 <%= f.hidden_field :points, :value => @journey.difficulty * 50 %>
 
+
   <div class="row clue-container">
     <p>Clue: <%= @journey.first_clue %></p><br>
     <p><%= image_tag @journey.first_image_url %></p>
@@ -34,6 +35,7 @@
       <br>
       <h2>Now that you've found it, upload a selfie of the location</h2><br>
       <button class="btn btn-secondary"><%= f.file_field :validation %></button><br /><br />
+
       <%= f.submit "Complete Journey", class: "btn btn-primary" %></li>
       </ul>
   </div>

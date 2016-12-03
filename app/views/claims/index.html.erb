@@ -1,12 +1,17 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-<h1>Journey Scrapbook</h1>
-<p>Pictures from others who reached the final destination</p><br />
+<h1>Latest Journey's Completed</h1>
+<p>Pictures from others who are playing!</p><br />
 <%= link_to "See your full explorer history", profile_path, class: "btn btn-primary" %>
+
     <% @claims.each do |claim| %>
-        <div class="col-md-6">
-          <%= image_tag claim.validation_url %>
+        <div class="col-md-6 scrapbook">
+           <h1>Journey Name: "<%= claim.journey.name %>"</h1>           
+           <h2>Completed: <%= time_ago_in_words(claim.journey.created_at) %> ago</h2>
+           <%= image_tag claim.validation_url %>
+
         </div>
+   
     <% end %>
 </div>
 

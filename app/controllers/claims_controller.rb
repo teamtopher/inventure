@@ -25,7 +25,7 @@ class ClaimsController < ApplicationController
 
 
   def index
-     @claims = Claim.all
+     @claims = Claim.all.order('created_at DESC')
     @journeys = Journey.all
 
   end
