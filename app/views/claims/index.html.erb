@@ -7,7 +7,7 @@
     <% @claims.each do |claim| %>
         <div class="col-md-6 scrapbook">
            <h1>Journey Name: "<%= claim.journey.name %>"</h1>           
-           <h2>Completed: <%= time_ago_in_words(claim.journey.created_at) %> ago</h2>
+           <h2>Completed: <%= time_ago_in_words(claim.created_at) %> ago</h2>
            <%= image_tag claim.validation_url %>
 
         </div>
