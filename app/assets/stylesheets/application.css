@@ -206,12 +206,12 @@ nav a:hover {
 
 
 .navbar-collapse li a {
-	padding-left: 10px;
-	text-align: center;
-	font-size: 2rem;
-	color: #1C3531;
-	margin-right: 10px;
-	padding: 5px;
+    text-align: center;
+    font-size: 2.2rem;
+    color: white;
+    margin-right: 20px;
+    padding: 15px 0 0 30px;
+    font-weight: bolder;
 }
 
 
@@ -226,7 +226,7 @@ nav a:hover {
  	width: 100%;
  	padding: 4% 0;
  	object-fit: cover;
- 	min-height: 500px;
+ 	min-height: 550px;
  	max-height: 600px;
  	background: url('landing_no_logo.jpg') no-repeat center center;
 	   -webkit-background-size: cover;
@@ -279,46 +279,97 @@ nav a:hover {
 .identity {
 	width:100%;
 	text-align: center;
-	background-color: #E6FFF2;
+	background-color: #f5f5f5;
 }
 
 .identity .col-md-3 {
-	margin-left: 16.66666667%;
+
 }
 
 .identity h1 {
-	font-size: 4.5rem;
-	padding: 20px 0 20px 0;
-	font-family: 'montserrat', sans-serif;
-	color: white !important;
-	background-color: #4BA966;
-	margin: 0px 0 0;
+    font-size: 5rem;
+    padding: 40px 0 40px 0;
+    font-family: 'exo', sans-serif;
+    /* color: black !important; */
+    background-color: #4BA966;
+    margin: 0px 0 0;
+    box-shadow: 5px 1px 5px #888888;
 }
 .background {
-	background-color: #E6FFF2;
+	background-color: #f5f5f5;
+
 }
-.background h2, .background p{
+.background h2 {
+	color: black;
+	font-size: 3rem;
+	margin-bottom: 40px;
+}
+.background p {
 	color: black;
 }
 
-.identity h2 {
-	font-size: 3rem;
-	padding: 20px 0 0 0;
-	font-family: 'Raleway', sans-serif;
-	color: black !important;
-	margin: 0 20% 40px;
-	text-align: justify-all;
+.landing-info h2 {
+    font-size: 3rem;
+    padding: 20px 0 0 0;
+    font-family: 'exo', sans-serif;
+    color: black !important;
+    margin: 0 0 20px;
+    font-weight: 900;
 }
 
-.identity p {
-	font-family: 'Raleway', sans-serif;
-	color: white !important;
-	text-align: left;
-	font-size: 2rem;
-    padding-bottom: 40px;
-    padding-top: 20px;
-    margin: 0px !important;
+.landing-info p {
+    font-family: 'Raleway', sans-serif;
+    padding: 0 75px;
+    text-align: center;
+    font-size: 2rem;
+    /* padding-bottom: 40px; */
+    /* padding-top: 20px; */
+    /* padding-right: 20px; */
+ 
     line-height: 2.5rem;
+}
+
+.landing-info .col-md-4 {
+	box-shadow: 1px 1px 1px #888888;
+    min-height: 300px;
+}
+
+.landing-info {
+	text-align: center;
+}
+
+.invent:hover {
+	background-color: #9fc0c7;
+	color: white;
+}
+
+.invent:active {
+	background-color: #9fc0c7;
+}
+
+.invent a:hover, .invent a:hover > h2, .invent a:hover > p {
+	color: white !important;
+	text-decoration: none !important;
+}
+
+.explore:hover, .explore:active {
+	background-color: #578c7a;
+	color: white;
+}
+
+.explore a:hover, .explore a:hover > h2, .explore a:hover > p {
+	color: white !important;
+	text-decoration: none !important;
+}
+
+.repeat:hover {
+	background-color: #933e40;
+	color: white;
+}
+
+.repeat a:hover, .repeat a:hover > h2, .repeat a:hover > p {
+	color: white !important;
+	text-decoration: none !important;
 }
 
 .scrollingphotos {
@@ -327,8 +378,8 @@ nav a:hover {
 }
 
 .explore-img {
-	height: 200px;
- 	background: url('explore-full.png') no-repeat center center;
+	height: 100px;
+ 	background: url('footprint.png') no-repeat center center;
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
  	   -o-background-size: cover;
@@ -337,7 +388,7 @@ nav a:hover {
 }
 
 .invent-img {
-	height: 200px;
+	height: 100px;
  	background: url('invent.png') no-repeat center center;
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
@@ -345,10 +396,17 @@ nav a:hover {
 	   background-size: contain;
 	margin: 20px;
 }
-
-.repeat-img {
+.preview {
 		height: 200px;
-		background: url('explore-full.png') no-repeat center center;
+ 	background: url('mobile-preview.png') no-repeat center center;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;
+}
+.repeat-img {
+		height: 100px;
+		background: url('streetsign.png') no-repeat center center;
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
  	   -o-background-size: cover;
@@ -356,22 +414,61 @@ nav a:hover {
 	   	margin: 20px 0 0 0;		
 	}
 
-.landing-info {
-	text-align: center;
-	padding-bottom: 20px;
+.left {
+	margin-left: 16.66666667%;
 }
 
-.landing-info h2 {
-	color: #913D42;
-	font-weight: bold;
-	font-family: serif;
-	letter-spacing: 3px;
+.right {
+	margin-right: 16.66666667%;
+	padding-left: 6%;
+
+}
+
+.info h3 {
+	color: black !important;
+}
+
+.info .btn {
+	width: 30%;
+}
+
+.map-img {
+		background: url('map.png') no-repeat center center;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;
+}
+
+.camera-img {
+	min-height: 500px;
+		background: url('camera.jpg') no-repeat center center;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;	
+}
+
+.hills-img {
+	min-height: 500px;
+		background: url('hills.png') no-repeat center center;
+	   -webkit-background-size: cover;
+ 	   -moz-background-size: cover;
+ 	   -o-background-size: cover;
+	   background-size: contain;	
 }
 
 .invent .col-md-3 {
 	margin-left: 16.66666667%;
 }
 
+.info h2 {
+	font-weight: bolder;
+	font-family: 'exo', sans-serif;
+	font-size: 3.5rem;
+	text-align: left;
+	margin-top: 40px;
+}
 
 .landing-signup-row {
  	width: 100%;
@@ -384,12 +481,21 @@ nav a:hover {
 		   background-size: cover;
 }
 
+.landing-signup-row h2 {
+	color: black;
+	margin-bottom: 5%;
+	font-weight: bolder;
+	font-family: 'Raleway', sans-serif !important;
+	font-size: 4rem;
+}
+
 .signup-form {
 	min-height: 450px;
 	border-radius: 15px;
 	padding: 30px !important;
-	background: #B0D8DA;
-	border: 3px solid #1a342f;
+	background: white;
+	border: .5px solid gray;
+	opacity: .85;
 }
 
 .signup-form .field {
@@ -397,11 +503,14 @@ nav a:hover {
 }
 
 .signup-form input {
-	background-color: #97BCC2;
-	border: 1px solid #1a342f;
+	border: .5px solid #1a342f;
+	font-weight: bolder;
 }
 
-
+.signup-form .btn {
+		background-color: #4BA966;
+		font-weight: bolder;
+}
 .image {
 	width: 100%;
 	object-fit: cover;
@@ -438,14 +547,6 @@ h1.all {
 	color: white;
 }
 
-
-.landing-signup-row h2 {
-	color: #1a342f;
-	margin-bottom: 5%;
-	font-weight: normal;
-	font-family: 'Raleway', sans-serif !important;
-}
-
 .scrollingphotos {
 	height: 250px;
 	background: url('signinbackground.jpg') no-repeat;
@@ -453,7 +554,6 @@ h1.all {
 	 	   -moz-background-size: cover;
 	 	   -o-background-size: cover;
 		   background-size: cover;
-
 }
 
 .form h2 {
@@ -481,16 +581,22 @@ label {
 
 /* --------- Responsive Layouts (Smaller Screen Styles) --------- */
 
-@media screen and (max-width:1050px) {
+@media screen and (max-width:1100px) {
 
+	.navbar-collapse:before, .navbar-collapse:after { /*Gets rid of a default bootstrap border */
+    	content: " ";
+    	display: none;
+	}
+
+/*
 	.landing-nav .navbar-collapse {
 		background-color: #98C2C8;
 	}
 
 	.hero-image {
 	 	width: 100%;	
-	 	max-height: 100px;
-	 	background: url('mobilelanding.jpg') no-repeat center center;
+	 	max-height: 50px;
+	 	background: url('mobilelanding.jpg') no-repeat;
 		   -webkit-background-size: cover;
 	 	   -moz-background-size: cover;
 	 	   -o-background-size: cover;
@@ -525,15 +631,40 @@ label {
 	label {
 		font-size: 1.3rem;
 	}
+
+*/
+
+}
+
+
+@media screen and (max-width:960px) {
+
+
 }
 
 /* --------- Mobile Styles: Turn into default styles! --------- */
 
 @media screen and (max-width:568px) {
+	
+	.landing-nav .navbar-collapse {
+		background-color: #98C2C8;
+	}
+
+	.hero-image {
+	 	width: 100%;	
+	 	max-height: 50px;
+	 	background: url('mobilelanding.jpg') no-repeat;
+		   -webkit-background-size: cover;
+	 	   -moz-background-size: cover;
+	 	   -o-background-size: cover;
+		   background-size: cover;
+	}
+
 	.col-md-6 {
 		width: 50% !important;
 		float: left;
 	}
+
 	.landing-nav .navbar-collapse {
 		margin-left: 15% !important;
 	}
@@ -546,10 +677,14 @@ label {
 		width: 220px;
 		margin: 0 20%;
 		padding: 0;
-		
 	}
+
 	p, label {		/* For more readable mobile text */
 		font-size: 1.9rem;
+	}
+
+	.navbar-collapse li a {
+	    padding: 30px 0 0 30px;
 	}
 
 	.form h2 {
@@ -574,6 +709,7 @@ label {
 	    font-size: 1.5rem;
 	    width: 27%;
     	margin: auto 42%;
+    	border: 1px solid #1C3531;
 	}
 
 	.identity .col-md-3 {
@@ -583,16 +719,13 @@ label {
 	.identity h1 {
 		font-size: 2.5rem;
 		padding: 20px;
-		background-color: #98C2C8;
 	}
 
 	.identity h2 {
 		font-size: 2rem;
-		color: white !important;
     	padding: 20px;
     	margin: 20px 0 0;
-    	background-color: #913D42;
-    	text-align: justify-all;
+    	border-bottom: 1px solid gray;
 	}
 
 	.identity p {
@@ -602,7 +735,6 @@ label {
 	.landing-info h2 {
 		color: #913D42;
 		font-weight: bold;
-		font-family: serif;
 		letter-spacing: 3px;
 	}
 
@@ -618,7 +750,7 @@ label {
 		padding: 0;
 	}
 
-	.explore, .invent {
+	.explore, .invent, .repeat {
 		text-align: center;
 		padding: 40px;
 		display: block;
@@ -628,9 +760,6 @@ label {
 	.explore {
 		background-color: #98C2C8;		
 	}
-	.invent {
-		background-color: #578c7a;
-	}
 
 	.explore .col-md-5,
 	.invent .col-md-5,
@@ -638,35 +767,12 @@ label {
 		margin: 0;
 	}
 
-	.invent-img, .explore-img, .repeat-img {
-		height: 120px;
-		margin: 0;
-		background-color: #578c7a;
-	}
-	.invent-img {
-		background: url('explore-full.png') no-repeat left;
-		background-color: #578c7a;
-	   -webkit-background-size: cover;
- 	   -moz-background-size: cover;
- 	   -o-background-size: cover;
-	   background-size: contain;
-	}
-	.repeat-img {
-		background: url('explore-full.png') no-repeat right;
-		background-color: #578c7a;
-	   -webkit-background-size: cover;
- 	   -moz-background-size: cover;
- 	   -o-background-size: cover;
-	   background-size: contain;		
-	}
+
 
 	.explore-text, .invent-text {
 		padding-top: 0;
 	}
 
-	.right {
-		float: none;
-	}
 
 	.btn-primary {
 		width: 100%;
@@ -676,6 +782,10 @@ label {
 
 	.landing-signup-row {
 		min-height: 400px;
+	}
+
+	.landing-signup-row h2 {
+	    font-size: 3rem;
 	}
 
 	.add_fields { /* Making "Add Another Stop" on journey creation into a button */
@@ -700,5 +810,29 @@ label {
 	    user-select: none;
 
 	}
+
+	.explore {
+		background-color: #578c7a;
+		color: white;
+	}
+
+	.repeat {
+		background-color: #933e40;
+		color: white;
+	}
+
+
+/* REMOVE AFTER REORGANIZING THE HTML FOR MOBILE */
+	.target {
+		display: none !important;
+	}
+	.explore a:hover, .explore a:hover > h2, .explore a:hover > p,
+	.invent a:hover, .invent a:hover > h2, .invent a:hover > p,
+	.repeat a:hover, .repeat a:hover > h2, .repeat a:hover > p {
+		color: black !important;
+		text-decoration: none !important;
+	}
+
+
 
 }

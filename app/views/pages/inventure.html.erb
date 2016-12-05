@@ -16,8 +16,9 @@
         <li><%= link_to "Profile", profile_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
      <% else %>
-        <li><%= link_to "Log in", new_user_session_path %></li>
-        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li><%= link_to "Log In", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Learn More", pages_about_path %></li>
       <% end %>
 
   </ul>
@@ -36,50 +37,132 @@
   </div><!--hero-image-->
 </div><!--row-->
 
-<!--<a id="anchor"/>-->
 <div class="background">
 <div class="row identity">
-  <h1>Make the journey as<br /> exciting as the destination</h1>
-  <h2>Inventure is a community exploration app that lets you create and share adventure for your favorite places</h2>
+  <h1>Make the journey as exciting <br />as the destination</h1>
+  <h2>Inventure is a community exploration app for creating and sharing adventures to your favorite places.</h2>
 </div><!--row identity-->
-  <div class="scrollingphotos">
+<div class="row">
+  <!--<div class="scrollingphotos">
+  </div>--> 
+</div><!--row-->
 
-  </div>
-<div class="row landing-info">
+  <div class="row landing-info">
+  
+  <div class="col-md-4 invent">
+    <div id="buttons"> 
+         <a class="Smallbutton" id="showStep1" data-target=".step1">
 
-  <div class="col-md-4">
     <div class="invent-img">
     </div><!--invent-img-->
     <h2>Invent</h2>
-    <p>Create journeys with pictures and clues</p>
-  </div><!--col-md-3-->
+    <p>Create journeys with pictures and clues.</p>
 
-  <div class="col-md-4">
+    </a></div></input>
+  </div><!--col-md-3-->
+  
+  <div class="col-md-4 explore">
+    <div id="buttons"> 
+         <a class="Smallbutton" id="showStep2" data-target=".step2">
+
       <div class="explore-img">
       </div><!--explore-img-->
     <h2>Explore</h2>
-    <p>Journey from stop to stop to find new places</p>
+    <p>Journey from stop to stop to find new places.</p>
+
+    </a></div>
   </div><!--col-md-3-->
 
-  <div class="col-md-4">
+  <div class="col-md-4 repeat">
+    <div id="buttons">
+      <a class="Smallbutton" id="showStep3" data-target=".step3">
+
       <div class="repeat-img">
       </div><!--explore-img-->
     <h2>Repeat</h2>
-    <p>Enjoyed yourself? Do it all again</p>
+    <p>Enjoyed yourself? Find another journey.</p>
+
+    </a></div>
   </div><!--col-md-3-->
 
-</div><!--row identity-->
+</div><!--row landing-info-->
+
+
+    <div class="row step1 target" style="display: none;"><!--invent-row-->
+        
+
+            <div class="col-md-4 info left">
+              <h2>Invent New Adventures</h2>
+                <h3>Share Your Favorite Hangouts</h3>
+                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                  <br />
+                <h3>Send People on Your Journeys</h3>
+                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                  <br />
+                <h3>Another Heading</h3>
+                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                  <br /><br />
+                <%= link_to "Learn More",  pages_about_path, class: "btn btn-primary" %>
+            </div>
+
+            <div class="col-md-4 right">
+                        <div class="camera-img"></div>
+            </div>
+    </div><!--invent-row-->
+
+    <div class="row step2 target" style="display: none;"><!--explore-row-->
+        <div class="col-md-4 left">
+            <div class="hills-img"></div>
+        </div>
+
+        <div class="col-md-4 info right">
+            <h2>Explore New Places</h2>
+                <h3>Adventure</h3>
+                <p>What's more fun than finding a new restaurant or hangout? Discovering it by suprise—recapturing the childhood fun of exploring, just seeing what's out there.</p>
+                  <br />
+                <h3>Rate</h3>
+                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                  <br />
+                <h3>Share</h3>
+                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                  <br /><br />
+                <%= link_to "Learn More",  pages_about_path, class: "btn btn-primary" %>
+            </div>
+              <br />
+            <p><%= link_to "Do fun things!", journeys_path %></p>
+    </div><!--explore-row-->
+
+    <div class="row step3 target" style="display: none;"><!--repeat-row-->
+        <div class="col-md-4 info left">
+            <h2>Talk About Other Features</h2>
+                <h3>Cool Stuff!</h3>
+                <p>What's more fun than finding a new restaurant or hangout? Discovering it by suprise—recapturing the childhood fun of exploring, just seeing what's out there.</p>
+                  <br />
+                <h3>And This!</h3>
+                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                  <br />
+                <h3>Don't Forget This!</h3>
+                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                  <br /><br />
+                <%= link_to "Learn More",  pages_about_path, class: "btn btn-primary" %>
+            </div>
+
+    </div><!--repeat-row-->
+
+
+
+
 
 </div><!--background-->
 
 <div class="row identity">
-  <h1>Let the Inventure begin!</h1>
+  <h1>Journey With Us</h1>
 </div><!--row identity-->
 
 <div class="row">
   <div class="landing-signup-row">
-    <div class="col-md-4 col-md-offset-4 signup-form">
-        <h2 class="mobileheader">Journey With Us</h2>
+    <div class="col-md-4 col-md-offset-4 signup-form"><a id="anchor"/>
+        <h2 class="mobileheader">Sign Up</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
@@ -110,3 +193,13 @@
     </div><!--col-md-offset-4 signup-form-->
   </div><!--landing-signup-row-->
 </div><!--row-->
+
+<%= javascript_tag do %>
+$(document).ready(function () {
+    var $targets = $('.target');
+    $('#buttons .Smallbutton').click(function () {
+        var $target = $($(this).data('target')).slideToggle();
+        $targets.not($target).hide()
+    });
+});
+<% end %>
