@@ -3,13 +3,19 @@
 
 <div class="row ">
 
-	<div class="col-md-3 explore">
-		<h2><%= link_to "Explore", journeys_path %></h2>
-		<p ><%= link_to "Journey from stop to stop to find new places", journeys_path %></p>
-	</div>
+	<%= link_to(journeys_path) do %>
+		<div class="col-md-3 explore">
+ 			<h2>Explore</h2>
+ 			<p>Journey from stop to stop to find new places</p>
+		</div>
+	<% end %>
 
-	<div class="col-md-3 invent">
-		<h2><%= link_to "Invent", new_journey_path %></h2>
-		<p><%= link_to "Create journeys with pictures and clues", new_journey_path %></p>
-	</div>
+	<%= link_to(new_journey_path) do %>
+		<div class="col-md-3 invent">
+ 			<h2>Invent</h2>
+ 			<p>Create journeys with pictures and clues</p>
+		</div>
+	<% end %>
+
+
 </div><!--row-->

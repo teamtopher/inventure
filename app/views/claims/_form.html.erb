@@ -21,7 +21,9 @@
 
       <% for clue in @journey.clues %>
             <li class="clue-image">Clue: <%= clue.content %><br /><br />
-            <%= image_tag clue.image_url, class: "clue-image" %></li>
+                <%= link_to image_url(clue.image_url) do %>
+                    <%= image_tag clue.image_url, class: "clue-image" %>
+                <% end %></li>            
       <% end %>
 
     </ul>

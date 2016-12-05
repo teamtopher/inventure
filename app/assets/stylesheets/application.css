@@ -446,7 +446,8 @@ nav a:hover {
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
  	   -o-background-size: cover;
-	   background-size: contain;	
+	   background-size: contain;
+	margin-top: 20px;	
 }
 
 .hills-img {
@@ -741,7 +742,6 @@ label {
 	.landing-info p {
 	font-size: 2.2rem;
     line-height: normal;
-    margin: 20px;
     padding: 0 50px;
 	}
 
@@ -820,12 +820,15 @@ label {
 		background-color: #933e40;
 		color: white;
 	}
-
+	.invent {
+		background-color: #98C2C8;
+	}
 
 /* REMOVE AFTER REORGANIZING THE HTML FOR MOBILE */
-	.target {
+	.background .target {
 		display: none !important;
 	}
+
 	.explore a:hover, .explore a:hover > h2, .explore a:hover > p,
 	.invent a:hover, .invent a:hover > h2, .invent a:hover > p,
 	.repeat a:hover, .repeat a:hover > h2, .repeat a:hover > p {
