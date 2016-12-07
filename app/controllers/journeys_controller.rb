@@ -80,7 +80,7 @@ class JourneysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journey_params
-      params.require(:journey).permit(:destination, :validation, :first_clue, :first_image, :user_id, :answer, :image, :remote_image_url, :name, :difficulty, :description, clues_attributes: [:remote_image_url, :image, :content, :id, :_destroy])
+      params.require(:journey).permit(:category, :destination, :validation, :first_clue, :first_image, :user_id, :answer, :image, :remote_image_url, :name, :difficulty, :description, clues_attributes: [:remote_image_url, :image, :content, :id, :_destroy])
     end
   
      def check_user

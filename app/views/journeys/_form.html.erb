@@ -77,6 +77,8 @@
             <%= f.text_area :description, class: "form-control" %>
             <br />
             <br />
+            <%= f.label :category %>
+            <%= f.select :category, options_for_category, :prompt => 'Select a category'  %>
           <p>Rate the difficulty from 1-5:</p>
             <br />
             <%= f.number_field :difficulty, class: "form-control" %>
