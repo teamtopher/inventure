@@ -23,15 +23,19 @@
             <li class="clue-image">Clue: <%= clue.content %><br /><br />
                 <%= link_to image_url(clue.image_url) do %>
                     <%= image_tag clue.image_url, class: "clue-image" %>
-                <% end %></li>            
-      <% end %>
+                </li>   
+            <% end %>  
+            <% end %>
+
+              <li class="clue-image">  <button type="button" class="found btn btn-primary">I think I'm at the final stop!</button></li>    
+
 
     </ul>
   </div>
    <button type="button" class="clues btn btn-primary">Show Next Clue</button>
    <h2 style ="text-align:center">OR:</h2>
   <div class="clue-container">
-  <button type="button" class="found btn btn-primary">I think I'm at the final stop!</button>
+
       <ul class="validation">
       <li class="final"><h1>Are you here?</h1><%= image_tag @journey.validation_url %><br><br><%= @journey.destination %>
       <br>
