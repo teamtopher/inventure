@@ -8,5 +8,11 @@ class Journey < ActiveRecord::Base
 	mount_uploader :validation, ValidationUploader
 
 	 has_many :claims, :dependent => :destroy
-	 ratyrate_rateable "experience"
+	 filterrific(
+  		  available_filters: [
+    			:sorted_by,
+    			:search_query,
+    			:category,
+  			]
+	)
 	end

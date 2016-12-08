@@ -6,6 +6,45 @@
 <br>
 <br>
 <div class="row">
+<%= form_for_filterrific @filterrific do |f| %>
+  <div>
+    Search
+    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
+    <%= f.text_field(
+      :search_query,
+      class: 'filterrific-periodically-observed'
+    ) %>
+  </div>
+  <div>
+    Country
+    <%= f.select(
+      :category,
+      @filterrific.select_options[:category],
+      { include_blank: '- Any -' }
+    ) %>
+  </div>
+  <div>
+    Sorted by
+    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
+  </div>
+  <div>
+    <%= link_to(
+      'Reset filters',
+      reset_filterrific_url,
+    ) %>
+  </div>
+  <%# add an automated spinner to your form when the list is refreshed %>
+  <%= render_filterrific_spinner %>
+<% end %>
+
+<%= render(
+  partial: 'journeys/list',
+  locals: { journeys: @journeys }
+) %>
+
+</div>
+
+<div class="row">
     <% @journeys.each do |journey| %>
       <div class="col-md-4">
         <%= link_to journey do %>

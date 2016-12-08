@@ -12,7 +12,20 @@ class JourneysController < ApplicationController
   end
 
   def index
+    
+  end
+
+  def index
     @journeys = Journey.order("created_at DESC")
+    @filterrific = initialize_filterrific(
+      Journey,
+      params[:filterrific]
+    ) 
+
+      respond_to do |format|
+        format.html
+        format.js
+      end
   end
 
   # GET /journeys/1

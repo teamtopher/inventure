@@ -7,5 +7,4 @@ class User < ActiveRecord::Base
   	has_many :journeys, :dependent => :destroy
    	has_many :creations, class_name: "Claim", foreign_key: "creator_id"
   	has_many :explorations, class_name: "Claim", foreign_key: "explorer_id"
-	ratyrate_rater
 end
