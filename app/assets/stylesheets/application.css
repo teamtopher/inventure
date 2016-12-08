@@ -583,6 +583,9 @@ label {
 	border-radius: 10px !important;
     padding: 5px !important;
 }
+ul.validation {
+	padding-left: 0px !important;
+}
 
 /* --------- Responsive Layouts (Smaller Screen Styles) --------- */
 

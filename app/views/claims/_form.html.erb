@@ -26,15 +26,15 @@
                 </li>   
             <% end %>  
             <% end %>
-
-              <li class="clue-image">  <button type="button" class="found btn btn-primary">I think I'm at the final stop!</button></li>    
-
-
+            <br>
+            <br>
+            <br>
+            <br>
+              <li class="clue-image">  <button type="button" class="found btn btn-primary">No More Clues! Click to Reveal Final Stop</button>
+                    </li>   
     </ul>
   </div>
-   <button type="button" class="clues btn btn-primary">Show Next Clue</button>
-   <h2 style ="text-align:center">OR:</h2>
-  <div class="clue-container">
+    <div class="clue-container">
 
       <ul class="validation">
       <li class="final"><h1>Are you here?</h1><%= image_tag @journey.validation_url %><br><br><%= @journey.destination %>
@@ -44,7 +44,11 @@
 
       <%= f.submit "Complete Journey", class: "btn btn-primary" %></li>
       </ul>
+
   </div>
+
+   <button type="button" class="clues btn btn-primary">Show Next Clue</button>
+
 <% end %>
 
 <script>
@@ -55,6 +59,8 @@ $('button.clues').click(function() {
 $('ul.validation > li.final').hide();
 $('button.found').click(function() {
     $('ul.validation > li.final:hidden:first').show();
+    $('button.clues').hide();
+
 
 });
 </script>
