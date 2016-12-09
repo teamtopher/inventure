@@ -19,6 +19,9 @@ select {
 	width: 100%;
 	font-size: 1.7rem;
 }
+.actions {
+	text-align: center;
+}
 /* --------- Container Styles (Global) --------- */
 .scrapbook h1{
 	font-size: 2rem;
