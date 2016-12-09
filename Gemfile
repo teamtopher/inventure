@@ -17,6 +17,7 @@ gem "figaro"
 gem "fog"
 gem 'carrierwave-imageoptimizer'
 gem 'ratyrate'
+gem 'ransack'
 
 group :production do 
 	gem 'pg'

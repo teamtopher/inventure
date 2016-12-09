@@ -6,6 +6,16 @@
 <br>
 <br>
 <div class="row">
+
+<%= search_form_for @search do |f| %>
+  <%= f.label :category_cont, "Choose a Category" %><br>
+  <%= f.select :category_cont, options_for_category, :prompt => 'Select a category', class: "form-control" %>
+  <br>
+  <br>
+<div class="actions">
+  <%= f.submit "Filter", class: "form-control" %>
+</div>
+<% end %>
     <% @journeys.each do |journey| %>
       <div class="col-md-4">
         <%= link_to journey do %>
@@ -23,7 +33,8 @@
       </div>
 
     <% end %>
-
+</div>
 <br>
 </div>
 </div>
+

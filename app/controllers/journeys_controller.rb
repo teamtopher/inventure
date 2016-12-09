@@ -12,7 +12,8 @@ class JourneysController < ApplicationController
   end
 
   def index
-    @journeys = Journey.order("created_at DESC")
+    @search = Journey.search(params[:q])
+    @journeys = @search.result
   end
 
   # GET /journeys/1
