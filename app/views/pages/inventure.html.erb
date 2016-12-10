@@ -39,7 +39,7 @@
 
 <div class="background">
 <div class="row identity">
-  <h1>Make the journey as exciting <br />as the destination</h1>
+  <h1>Make the journey as exciting as the destination</h1>
   <h2>Inventure is a community exploration app for creating and sharing adventures to your favorite places.</h2>
 </div><!--row identity-->
 <div class="row">
@@ -50,57 +50,42 @@
   <div class="row landing-info">
   
   <div class="col-md-4 invent">
-    <div id="buttons"> 
-         <a class="Smallbutton" id="showStep1" data-target=".step1">
-
     <div class="invent-img">
     </div><!--invent-img-->
     <h2>Invent</h2>
     <p>Create journeys with pictures and clues.</p>
-
-    </a></div></input>
   </div><!--col-md-3-->
   
   <div class="col-md-4 explore">
-    <div id="buttons"> 
-         <a class="Smallbutton" id="showStep2" data-target=".step2">
-
       <div class="explore-img">
       </div><!--explore-img-->
     <h2>Explore</h2>
     <p>Journey from stop to stop to find new places.</p>
-
-    </a></div>
   </div><!--col-md-3-->
 
   <div class="col-md-4 repeat">
-    <div id="buttons">
-      <a class="Smallbutton" id="showStep3" data-target=".step3">
-
       <div class="repeat-img">
       </div><!--explore-img-->
     <h2>Repeat</h2>
     <p>Enjoyed yourself? Find another journey.</p>
-
-    </a></div>
   </div><!--col-md-3-->
 
 </div><!--row landing-info-->
 
 
-    <div class="row step1 target" style="display: none;"><!--invent-row-->
+    <div class="row" style="border-bottom: 1px solid lightgray;"><!--invent-row-->
         
 
             <div class="col-md-4 info left">
-              <h2>Invent New Adventures</h2>
-                <h3>Share Your Favorite Hangouts</h3>
+              <h2>Invent New Journeys</h2>
+                <h3>Choose a destination</h3>
+                <p>Are you an inventor? Have you found a destination that deserves discovery? We have an important task for you. Invent a journey, the path that will lead explorers to your treasure!</p>
+                  <br />
+                <h3>Invent a journey</h3>
                 <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
                   <br />
-                <h3>Send People on Your Journeys</h3>
-                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
-                  <br />
-                <h3>Another Heading</h3>
-                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                <h3>Share your journey</h3>
+                <p>Journeys invented are experiences shared!</p>
                   <br /><br />
                 <%= link_to "Learn More",  pages_about_path, class: "btn btn-primary" %>
             </div>
@@ -110,47 +95,25 @@
             </div>
     </div><!--invent-row-->
 
-    <div class="row step2 target" style="display: none;"><!--explore-row-->
+    <div class="row"><!--explore-row-->
         <div class="col-md-4 left">
             <div class="hills-img"></div>
         </div>
 
         <div class="col-md-4 info right">
             <h2>Explore New Places</h2>
-                <h3>Adventure</h3>
-                <p>What's more fun than finding a new restaurant or hangout? Discovering it by suprise—recapturing the childhood fun of exploring, just seeing what's out there.</p>
+                <h3>Discover new places</h3>
+                <p>Are you an explorer? Inventure will help you discover your next destination! We offer you a unique selection of journeys to explore.</p>
                   <br />
-                <h3>Rate</h3>
-                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                <h3>Explore</h3>
+                <p>Look no further than Inventure for a journey that will lead you to the undiscovered treasures within your community! You can select your journey by photo, name, difficulty, and category.</p>
                   <br />
-                <h3>Share</h3>
-                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
+                <h3>Share your discovery</h3>
+                <p>So, you’ve followed the path from point to point to the destination. The journey doesn’t end there! Share a photo of yourself with the treasure you discovered.</p>
                   <br /><br />
                 <%= link_to "Learn More",  pages_about_path, class: "btn btn-primary" %>
             </div>
-              <br />
-            <p><%= link_to "Do fun things!", journeys_path %></p>
     </div><!--explore-row-->
-
-    <div class="row step3 target" style="display: none;"><!--repeat-row-->
-        <div class="col-md-4 info left">
-            <h2>Talk About Other Features</h2>
-                <h3>Cool Stuff!</h3>
-                <p>What's more fun than finding a new restaurant or hangout? Discovering it by suprise—recapturing the childhood fun of exploring, just seeing what's out there.</p>
-                  <br />
-                <h3>And This!</h3>
-                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
-                  <br />
-                <h3>Don't Forget This!</h3>
-                <p>Know a place in your community that deserves more attention? A hidden gem, perhaps? Help others discover it for themselves.</p>
-                  <br /><br />
-                <%= link_to "Learn More",  pages_about_path, class: "btn btn-primary" %>
-            </div>
-
-    </div><!--repeat-row-->
-
-
-
 
 
 </div><!--background-->

@@ -22,6 +22,9 @@ select {
 .actions {
 	text-align: center;
 }
+.navbar {
+	margin-bottom: 0 !important;
+}
 /* --------- Container Styles (Global) --------- */
 .scrapbook h1{
 	font-size: 2rem;
@@ -48,10 +51,6 @@ select {
 .landing-nav img {
 margin: 0 auto;
 
-}
-
-.about {
-	margin: 20px;
 }
 
 img {
@@ -103,9 +102,12 @@ body {
 
 /* --------- Text Styles (Global) --------- */
 
-body, h1, h2, h3, h4, p, a, em, strong, label {
+body, p, a, em, strong, label {
 	font-family: 'Raleway', sans-serif;
-	color: white;
+}
+
+h1, h2, h3 {
+	font-family: 'exo', sans-serif;	
 }
 
 input {
@@ -144,7 +146,6 @@ h2 {
 	background: #933e40;
 	border: none;
 	margin-bottom: 35px;
-	display: block;
 }
 
 .landing-signup-row .btn-primary {
@@ -302,7 +303,7 @@ nav a:hover {
     font-size: 5rem;
     padding: 40px 0 40px 0;
     font-family: 'exo', sans-serif;
-    /* color: black !important; */
+    color: white;
     background-color: #4BA966;
     margin: 0px 0 0;
     box-shadow: 5px 1px 5px #888888;
@@ -350,39 +351,6 @@ nav a:hover {
 	text-align: center;
 }
 
-.invent:hover {
-	background-color: #9fc0c7;
-	color: white;
-}
-
-.invent:active {
-	background-color: #9fc0c7;
-}
-
-.invent a:hover, .invent a:hover > h2, .invent a:hover > p {
-	color: white !important;
-	text-decoration: none !important;
-}
-
-.explore:hover, .explore:active {
-	background-color: #578c7a;
-	color: white;
-}
-
-.explore a:hover, .explore a:hover > h2, .explore a:hover > p {
-	color: white !important;
-	text-decoration: none !important;
-}
-
-.repeat:hover {
-	background-color: #933e40;
-	color: white;
-}
-
-.repeat a:hover, .repeat a:hover > h2, .repeat a:hover > p {
-	color: white !important;
-	text-decoration: none !important;
-}
 
 .scrollingphotos {
 	margin: 0 2% 40px;
@@ -427,12 +395,13 @@ nav a:hover {
 	}
 
 .left {
-	margin-left: 16.66666667%;
+	margin-left: 12%;
 }
 
 .right {
-	margin-right: 16.66666667%;
-	padding-left: 6%;
+
+	margin-right: 9%;
+	padding-left: 20px; /* was 6% */
 
 }
 
@@ -593,6 +562,95 @@ label {
 }
 ul.validation {
 	padding-left: 0px !important;
+}
+
+
+/* ---------------------- About Page styles ------------------------ */
+
+.left h2, .right h2 {
+	text-align: left;
+	margin-top: 40px;
+}
+
+.hills {
+	height: 450px;
+	background: url('hills.png') no-repeat;
+			   -webkit-background-size: cover;
+	 	   -moz-background-size: cover;
+	 	   -o-background-size: cover;
+		   background-size: cover;
+}
+
+.sidebar {
+	color: white;
+	height: 450px;
+	padding: 20px;
+}
+
+.about-row-1 h1 {
+	color: black;
+	text-align: center;
+	font-size: 8rem;
+}
+
+.about {
+	margin: 0;
+}
+.about .col-md-4 {
+	padding: 0;
+}
+
+
+.about li {
+	padding-bottom: 20px;
+	font-size: 1.5rem;
+}
+
+
+.invent-row {
+	background-color: #98C2C8;
+}
+
+img.explore-hand, img.invent-hand {
+	width: 110%;
+
+}
+
+.about-invent {
+	background-color: #f5f5f5;
+	width: 70%;
+	min-height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.about-invent .row, .about-explore .row {
+	border-bottom: 1px solid lightgray;
+	padding-top: 20px;
+}
+
+.about-row-3 {
+	background-color: #933e40;
+}
+
+.about-explore {
+	background-color: #578c7a;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+}
+
+div.circle img {
+    background: url(hills.png) no-repeat;
+    width: 300px;
+    min-height: 300px;
+    display: block;
+    border-radius: 50%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px 0;
 }
 
 /* --------- Responsive Layouts (Smaller Screen Styles) --------- */
