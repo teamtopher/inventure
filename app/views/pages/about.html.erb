@@ -35,16 +35,17 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 left">
-				<div class="circle">
-					<%= image_tag('invent_bubble_1.png') %>
-				</div>
-			</div>
 			<div class="col-md-4 right">
 				<h2>II - Add Stops</h2>
 				<p>Add pictures for each of your stops; then write a clue leading to each picture.</p>
 				<p>TIP: You can add pictures during this process or edit the journey later.</p>
 			</div>
+			<div class="col-md-4 left">
+				<div class="circle">
+					<%= image_tag('invent_bubble_1.png') %>
+				</div>
+			</div>
+			
 		</div>
 		<div class="row">
 			<div class="col-md-4 left">
@@ -58,11 +59,6 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 left">
-				<div class="circle">
-					<%= image_tag('invent_bubble_3.png') %>
-				</div>
-			</div>
 			<div class="col-md-4 right">
 				<h2>IV - Finalize the Journey</h2>
 				<p>Add a name and confirmation picture of the destination so explorers know they've found the right place.</p>
@@ -70,8 +66,14 @@
 				<br />
 				<br />
 				<br />
-				<%= link_to "Get Started",  new_user_registration_path, class: "btn btn-primary" %></ul>
+				<%= link_to "Get Started",  new_user_registration_path, class: "btn btn-primary" %>
 			</div>
+			<div class="col-md-4 left">
+				<div class="circle">
+					<%= image_tag('invent_bubble_3.png') %>
+				</div>
+			</div>
+			
 		</div>
 	</div>	
 </div>
@@ -91,15 +93,16 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="col-md-4 right">
+				<h2>II - Get Started</h2>
+				<p>Once you've found a journey, simply hit "Let's Go!" to begin.</p>
+			</div>
 			<div class="col-md-4 left">
 				<div class="circle">
 					<%= image_tag('explore_bubble_1.png') %>
 				</div>
 			</div>
-			<div class="col-md-4 right">
-				<h2>II - Get Started</h2>
-				<p>Once you've found a journey, simply hit "Let's Go!" to begin.</p>
-			</div>
+			
 		</div>
 		<div class="row">
 			<div class="col-md-4 left">
@@ -113,11 +116,6 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 left">
-				<div class="circle">
-					<%= image_tag('explore_bubble_3.png') %>
-				</div>
-			</div>
 			<div class="col-md-4 right">
 				<h2>IV - Selfie Time</h2>
 				<p>When you see the destination sign, look around for the destination. Check it out, and take a selfie while you're at it!</p>
@@ -125,8 +123,14 @@
 				<br />
 				<br />
 				<br />
-				<%= link_to "Get Started",  new_user_registration_path, class: "btn btn-primary" %></ul>
+				<%= link_to "Get Started",  new_user_registration_path, class: "btn btn-primary" %>
 			</div>
+			<div class="col-md-4 left">
+				<div class="circle">
+					<%= image_tag('explore_bubble_3.png') %>
+				</div>
+			</div>
+			
 		</div>
 	</div>	
 </div>
