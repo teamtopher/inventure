@@ -1,4 +1,3 @@
-
 <div class="form">
 <%= form_for(@journey) do |f| %>
   <% if @journey.errors.any? %>
@@ -17,10 +16,10 @@
     
     <h2>1 - Add the Starting Point</h2>  
     <br />
-    <p>Add a picture of the place where the journey begins.</p>
+    <p>Upload a picture of the place where the journey begins.</p>
     <%= f.file_field :first_image, class: "btn btn-primary" %>
     <br />
-    <p>Name or describe the place.</p>
+    <p>Name or describe the starting point.</p>
     <%= f.text_area :first_clue, class: "form-control" %>
         <br />
 

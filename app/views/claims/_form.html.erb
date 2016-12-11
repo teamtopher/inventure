@@ -15,7 +15,7 @@
 
 
   <div class="row clue-container">
-    <p>Clue: <%= @journey.first_clue %></p><br>
+    <p>Starting Point:<br /> <%= @journey.first_clue %></p><br>
     <p><%= image_tag @journey.first_image_url %></p>
     <ul class="clue">
 
@@ -37,17 +37,17 @@
     <div class="clue-container">
 
       <ul class="validation">
-      <li class="final"><h1>Are you here?</h1><%= image_tag @journey.validation_url %><br><br><%= @journey.destination %>
+      <li class="final"><h1>The Destination<br /></h1><%= image_tag @journey.validation_url %><br><br><%= @journey.destination %>
       <br>
-      <h2>Now that you've found it, upload a selfie of the location</h2><br>
-      <button class="btn btn-secondary"><%= f.file_field :validation %></button><br /><br />
+      <h2>Now that you've found it, upload a selfie to remember and share your journey!</h2><br>
+      <button class="btn btn-secondary"><%= f.file_field :validation, required: true %></button><br /><br />
 
       <%= f.submit "Complete Journey", class: "btn btn-primary" %></li>
       </ul>
 
   </div>
 
-   <button type="button" class="clues btn btn-primary">Show Next Clue</button>
+   <button type="button" class="clues btn btn-primary">Next Clue</button>
 
 <% end %>
 

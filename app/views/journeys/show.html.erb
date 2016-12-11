@@ -1,4 +1,6 @@
 <div class="form">
+
+<br />
 <p id="notice"><%= notice %></p>
 <div class="image-show">
 	<%= image_tag @journey.first_image_url if @journey.first_image? %>
@@ -9,20 +11,25 @@
 <p>
   <strong>Starting Point:</strong> <%= @journey.first_clue %>
 </p>
+<br />
 <p>
-  <strong>Keywords:</strong> <%= @journey.description %>
+  <strong>Description</strong> <br /><%= @journey.description %>
 </p>
+<br />
 <p>
   <strong>Difficulty Rating:</strong> <%= @journey.difficulty %>
 </p>
+<br />
 
 
-
-<div class="center">
+	<div class="center">
       <%= link_to "Let's Go!", new_journey_claim_path(@journey), class: "btn btn-primary" %>
     </div>
-<% if @journey.user == current_user %>
-	<%= link_to 'Edit', edit_journey_path(@journey) %> |
-<% end %>
-<%= link_to 'Back', journeys_path %>
+
+<div class="options-text">
+		<%= link_to 'Back', journeys_path %> 
+		<% if @journey.user == current_user %>
+			| <%= link_to 'Edit', edit_journey_path(@journey) %> 
+		<% end %>
+	</div>	
 </div>

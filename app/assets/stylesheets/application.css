@@ -69,10 +69,7 @@ img {
 ul.clue {
 	padding-left: 0 !important;
 }
-.clue-container img {
-	width: 100% !important;
-	height: auto;
-}
+
 .clue-container ul li, .clue-container p {
     font-size: 2.5rem;
     line-height: normal;
@@ -80,12 +77,19 @@ ul.clue {
     list-style: none;
 }
 
+.clue-container ul li {
+	margin-top: 20px;
+}
+
 .thumb {
     box-shadow: 4px 4px 5px lightgray;
 }
 
 .clue-container img {
-	border-bottom: 1px solid white;
+	width: 100% !important;
+	height: auto;
+	border-bottom: 1px solid darkgray;
+	padding-bottom: 20px;
 }
 
 .btn-default {
@@ -117,6 +121,7 @@ body {
 
 body, p, a, em, strong, label {
 	font-family: 'Raleway', sans-serif;
+	line-height: 22px;
 }
 
 h1, h2, h3 {
@@ -168,7 +173,9 @@ h2 {
 .btn-primary body { color: #c3dfcf !important }
 
 .btn-secondary {
-	background-color: #933e40;
+	    background-color: #4BA966;
+    	border: .5px solid #578c7a;
+    	margin-bottom: 20px;
 }
 
 .field { text-align: left !important; }
@@ -187,6 +194,14 @@ h2 {
 
 img.clue-image { width:100%; }
 
+
+.options-text a { /*For links like Edit & Back that aren't really button material. */
+	font-size: 20px;
+	padding: 20px;
+}
+.options-text {
+	text-align: center;
+}
 
 /* --------- Navigation Styles (Global) --------- */
 
@@ -552,10 +567,11 @@ h1.all {
 }
 
 .form h2 {
-	color: white;
-	margin-bottom: 5%;
-	font-weight: normal;
-	font-family: 'Raleway', sans-serif;
+	color: #933e40;
+	margin-bottom: 20px;
+	font-weight: bolder;
+	font-family: 'exo', sans-serif;
+	font-size: 3.2rem;
 }
 
 label {
@@ -669,6 +685,11 @@ div.circle img {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 20px 0;
+}
+
+.invent-row .btn, .explore-row .btn {
+	margin-top: 50px;
+	margin-bottom: 20px;
 }
 
 /* --------- Responsive Layouts (Smaller Screen Styles) --------- */
