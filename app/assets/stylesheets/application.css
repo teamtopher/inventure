@@ -25,6 +25,7 @@ select {
 .navbar {
 	margin-bottom: 0 !important;
 }
+
 /* --------- Container Styles (Global) --------- */
 .scrapbook h1{
 	font-size: 2rem;
@@ -46,6 +47,14 @@ select {
 	width: 300px;
     margin: 0%;
     padding: 0;
+}
+
+.filter img {
+	width: 50px;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10%;
+	background-color: #f5f5f5;
 }
 
 .landing-nav img {
@@ -71,6 +80,10 @@ ul.clue {
     list-style: none;
 }
 
+.thumb {
+    box-shadow: 4px 4px 5px lightgray;
+}
+
 .clue-container img {
 	border-bottom: 1px solid white;
 }
@@ -87,7 +100,7 @@ div[id^=panel] {
 }
 
 body {
-	background-color: #1a342f;
+	background-color: #f5f5f5;
 }
 
 .container-fluid {
@@ -595,6 +608,7 @@ ul.validation {
 
 .about {
 	margin: 0;
+	    background-color: #1a342f;
 }
 .about .col-md-4 {
 	padding: 0;
@@ -914,7 +928,7 @@ div.circle img {
 		color: black;
 	}
 
-	.row {
+	.about-invent .row, .about-explore .row {
 		padding: 10px;
 	}
 

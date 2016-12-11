@@ -10,12 +10,12 @@
   </div>
   <div class="form-group">
     <%= f.label :image, "Upload Profile Picture" %><br />
-    <%= f.file_field :image %>
+    <%= f.file_field :user_image %>
   </div>
   <div class="form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, class: "form-control" %>
-  </div>
+  </div> 
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

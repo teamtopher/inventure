@@ -1,24 +1,29 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
-
+<div id="buttons"> 
+         <a class="Smallbutton filter" id="showStep" data-target=".step"><%= image_tag('filter.png') %></a>
+    </div>
 <h1 class="mobileheader">Explore</h1>
 
 <br>
 <br>
 <div class="row">
 
+    
+<div class="target step" style="display:none;">
 <%= search_form_for @search do |f| %>
 <h2>Explore by Category</h2>
-  <%= f.select :category_cont, options_for_category, :prompt => 'Select a category', class: "form-control" %>
+  <%= f.select :category_cont, options_for_category, :prompt => 'All Journeys', class: "form-control" %>
   <br>
   <br>
 <div class="actions">
-  <%= f.submit "Filter", class: "form-control" %><br>
-  <%= link_to 'Clear Filter', journeys_path, class: "form-control" %>
+  <%= f.submit "Filter", class: "form-control btn-success" %><br>
+  <%= link_to 'Clear Filter', journeys_path, class: "form-control btn-danger" %>
 </div>
 <% end %>
+</div>
     <% @journeys.each do |journey| %>
-      <div class="col-md-4">
+      <div class="col-md-4 thumb">
         <%= link_to journey do %>
         <%= image_tag journey.first_image_url, class: "image" %>
         <div class="overlay">
@@ -39,3 +44,12 @@
 </div>
 </div>
 
+<%= javascript_tag do %>
+$(document).ready(function () {
+    var $targets = $('.target');
+    $('#buttons .Smallbutton').click(function () {
+        var $target = $($(this).data('target')).slideToggle();
+        $targets.not($target).hide()
+    });
+});
+<% end %>

@@ -156,13 +156,3 @@
     </div><!--col-md-offset-4 signup-form-->
   </div><!--landing-signup-row-->
 </div><!--row-->
-
-<%= javascript_tag do %>
-$(document).ready(function () {
-    var $targets = $('.target');
-    $('#buttons .Smallbutton').click(function () {
-        var $target = $($(this).data('target')).slideToggle();
-        $targets.not($target).hide()
-    });
-});
-<% end %>
