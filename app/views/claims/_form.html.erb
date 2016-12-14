@@ -30,8 +30,8 @@
             <br>
             <br>
             <br>
-              <li class="clue-image">  <button type="button" class="found btn btn-primary">No More Clues! Click to Reveal Final Stop</button>
-                    </li>   
+              <li class="clue-image">  <button type="button" class="found btn"><%= image_tag('destination.png') %></button>
+                    <br /><br /><br /></li>   
     </ul>
   </div>
     <div class="clue-container">
@@ -40,9 +40,9 @@
       <li class="final"><h1>The Destination<br /></h1><%= image_tag @journey.validation_url %><br><br><%= @journey.destination %>
       <br>
       <h2>Now that you've found it, upload a selfie to remember and share your journey!</h2><br>
-      <button class="btn btn-secondary"><%= f.file_field :validation, required: true %></button><br /><br />
+      <button class="btn btn-primary" style="width:100%;"><%= f.file_field :validation, required: true %></button><br /><br />
 
-      <%= f.submit "Complete Journey", class: "btn btn-primary" %></li>
+      <%= f.submit "Complete Journey", class: "btn btn-secondary btn-lg btn-block" %></li>
       </ul>
 
   </div>

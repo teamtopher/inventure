@@ -23,8 +23,8 @@
       <% if user_signed_in? %>
          <li><%= link_to "Explore", journeys_path %></li>
           <li><%= link_to "Invent", new_journey_path %></li>
-          <li><%= link_to "Profile", profile_path %></li>
           <li><%= link_to "About", pages_about_path %></li>
+          <li><%= link_to "Profile", profile_path %></li>
        		<li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
        <% else %>
           <li><%= link_to "Log In", new_user_session_path %></li>

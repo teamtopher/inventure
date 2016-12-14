@@ -26,6 +26,19 @@ select {
 	margin-bottom: 0 !important;
 }
 
+.found.btn {
+	background-color: #f5f5f5;
+	padding: 0;
+}
+
+button.found img {
+	min-height: 300px;
+}
+
+hr {
+	border: .5px solid lightgray;
+}
+
 /* --------- Container Styles (Global) --------- */
 .scrapbook h1{
 	font-size: 2rem;
@@ -112,6 +125,10 @@ body {
 	padding-right: 0px !important;
 }
 
+.container {
+	width: auto;
+}
+
 .row {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
@@ -137,11 +154,8 @@ input[type="file"] {
     width: 100%;
 }
 
-h1.mobileheader{
+.mobileheader{
 	text-align: center;
-}
-.center h2 {
-	color: white;
 }
 
 h2 {
@@ -158,6 +172,10 @@ h2 {
 
 /* --------- Button Styles --------- */
 
+.btn {
+	vertical-align: initial;
+}
+
 .btn-link{ color: white; }
 
 .btn-primary {
@@ -166,16 +184,17 @@ h2 {
 	margin-bottom: 35px;
 }
 
-.landing-signup-row .btn-primary {
-	color: #1a342f !important;
+.btn-full {
+	width: 100% !important;
 }
-
-.btn-primary body { color: #c3dfcf !important }
 
 .btn-secondary {
 	    background-color: #4BA966;
     	border: .5px solid #578c7a;
     	margin-bottom: 20px;
+    	color: #f5f5f5;
+    	font-weight: 500;
+    	width: 48%;
 }
 
 .field { text-align: left !important; }
@@ -437,9 +456,6 @@ nav a:hover {
 	color: black !important;
 }
 
-.info .btn {
-	width: 30%;
-}
 
 .map-img {
 		background: url('map.png') no-repeat center center;
@@ -449,23 +465,24 @@ nav a:hover {
 	   background-size: contain;
 }
 
-.camera-img {
-	min-height: 500px;
-		background: url('camera.jpg') no-repeat center center;
+.mobile-explore {
+	height: 600px;
+		background: url('explore-blk-frame.png') no-repeat center center;
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
  	   -o-background-size: cover;
 	   background-size: contain;
-	margin-top: 20px;	
+	margin-top: 20px 0;	
 }
 
-.hills-img {
-	min-height: 500px;
-		background: url('hills.png') no-repeat center center;
+.mobile-invent {
+	min-height: 550px;
+		background: url('invent-home.png') no-repeat center center;
 	   -webkit-background-size: cover;
  	   -moz-background-size: cover;
  	   -o-background-size: cover;
-	   background-size: contain;	
+	   background-size: contain;
+	margin: 20px 0;	
 }
 
 .invent .col-md-3 {
@@ -520,6 +537,8 @@ nav a:hover {
 .signup-form .btn {
 		background-color: #4BA966;
 		font-weight: bolder;
+		border: none;
+		width: 40%;
 }
 .image {
 	width: 100%;
@@ -552,9 +571,8 @@ th.center {
 	color: black;
 }
 
-
-h1.all {
-	color: white;
+.scrapbook .overlay {
+	background-color: #4BA966;
 }
 
 .scrollingphotos {
@@ -782,7 +800,7 @@ div.circle img {
 		margin-left: 15% !important;
 	}
 
-	.background, .identity {
+ 	.identity {
 		background-color: #98C2C8;
 	}
 
@@ -851,6 +869,10 @@ div.circle img {
 		letter-spacing: 3px;
 	}
 
+	.signup-form .btn {
+		width: 100%;
+	}
+
 	.landing-info p {
 	font-size: 2.2rem;
     line-height: normal;
@@ -887,9 +909,8 @@ div.circle img {
 
 
 	.btn-primary {
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+		width: 48%;
+
 	}
 
 	.landing-signup-row {
@@ -901,20 +922,18 @@ div.circle img {
 	}
 
 	.add_fields { /* Making "Add Another Stop" on journey creation into a button */
-		width: 45%;
+		width: 50%;
 		display: block;
 		margin: 0 0 35px;
-		background: #97bec3;
-		border: none;
+		border: 2px solid #1a342f;
 		border-radius: 4px;
 		padding: 6px 12px;
     	font-size: 14px;
+    	color: #1a342f;
     	line-height: 1.42857143;
    	 	text-align: center;
     	vertical-align: middle;
- 	   -ms-touch-action: manipulation;
-    	touch-action: manipulation;
-    	cursor: pointer;
+
     	white-space: nowrap;
 	    -webkit-user-select: none;
 	    -moz-user-select: none;
@@ -936,7 +955,9 @@ div.circle img {
 		background-color: #98C2C8;
 	}
 
-
+.btn-full {
+	width: 100% !important;
+}
 /*---------- About Page responsive --------- */
 	
 	.about-invent, .about-explore, img.invent-hand, img.explore-hand {
@@ -956,6 +977,7 @@ div.circle img {
 	.left, .right {
 		margin-left: 0;
 		margin-right: 0;
+		float: none;
 	}
 
 

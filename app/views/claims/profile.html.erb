@@ -1,12 +1,13 @@
+<div class="container">
   <h1><%= @current_user.username %>'s Profile</h1>
-  <button class="btn btn-primary"><%= link_to "Edit Profile", edit_user_registration_path %></button>
-
+    <button class="btn btn-secondary"><%= link_to "Edit Profile", edit_user_registration_path %></button>
 <div class="row">
     <p><%= image_tag(@current_user_image) %></p>
 </div>
 
 <div class="row">
-  <h2>Creator History: Who's Finished Your Journeys?</h2>
+  <h2>Creator History</h2>
+  <p style="text-align: center">Who's Finished Your Journeys?</p>
 </div><!-- row -->
 
 
@@ -14,26 +15,32 @@
 <div class="table-responsive">
 <table class="table table-bordered">
   <tr>
-    <th class="center">Name</th>
+    <th class="center">Journey</th>
     <th class="center">Explorer</th>
-    <th class="center">Explorer's Answer</th>
-    <th class="center">Date Completed</th>
+    <th class="center">Date</th>
   </tr>
 
   <% @claims.each do |claim| %>
     <tr>
       <td class="center"><%= claim.journey.name %></td>
       <td class="center"><%= claim.explorer.username %></td>
-      <td class="center"><%= image_tag claim.validation_url %></td>
-</td>
       <td class="center"><%= claim.created_at.strftime("%B %-d, %Y") %></td>
     </tr>
   <% end %>
 </table>
+<br />
+<div class="container">
+<% if user_signed_in? %>
+  <%= link_to 'Invent', new_journey_path, class: "btn btn-primary" %>
+<% end %>
+</div>
+
+
 </div>
 <br>
 <div class="center">
-  <h2>Explorer History: What Have You Found?</h2>
+  <h2>Explorer History</h2>
+  <p style="text-align: center">What Have You Found?</p>
 </div>
 <div class="points">
   <h3>Your Total Points: <%= @claims.sum(:points).to_i %></h3>
@@ -42,10 +49,8 @@
   <table class="table table-bordered">
     <tr>
       <th class="center">Journey Name</th>
-      <th class="center">Completed?</th>
+      <th class="center">Completed On</th>
       <th class="center">Points Earned</th>
-      <th class="center">Your Answer</th>
-
     </tr>
 
     <% @claims.each do |claim| %>
@@ -53,17 +58,14 @@
         <td class="center"><%= link_to claim.journey.name, @journey_claims_path %></td>
         <td class="center"><%= claim.created_at.strftime("%B %-d, %Y") %></td>
         <td class="center"><%= claim.points %></td>
-        <td class="center"><%= image_tag claim.validation_url %></td>
       </tr>
     <% end %>
   </table>
+  <br />
+  <div class="container">
+    <% if user_signed_in? %>
+      <%= link_to 'Explore', new_journey_path, class: "btn btn-primary" %>
+    <% end %>
 </div>
-<br>
-
-
-<div class="container">
-<% if user_signed_in? %>
-  <%= link_to 'New Journey', new_journey_path, class: "btn btn-primary" %>
-<% end %>
 </div>
-
+  </div>
